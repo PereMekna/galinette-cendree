@@ -15,6 +15,15 @@
         <li id="newTicket" <?php if (preg_match('#newTicket.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="newTicket.php">Nouveau ticket</a></li>
         <li id="ticketList" <?php if (preg_match('#allTickets.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="allTickets.php">Tickets ouverts</a></li>
       </ul>
+      <form class="navbar-form navbar-right" role="login">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Login" id="log">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Mot de passe" id="mdp">
+        </div>
+        <button type="submit" class="btn btn-default">Se connecter</button>
+      </form>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
