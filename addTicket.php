@@ -23,11 +23,12 @@ $req->execute(array(
 				'priorite' => intval($_POST["labpriohidden"])));
 $lastID = $db->lastInsertId();
 
-$req = $db->prepare('INSERT INTO descriptions(TEXTE, N_TICKET, DATE) VALUES(:texte, :n_ticket, :date)');
+$req = $db->prepare('INSERT INTO descriptions(TEXTE, N_TICKET, DATE, AVANCEMENT) VALUES(:texte, :n_ticket, :date, :avancement)');
 $req->execute(array(
-				'texte' => $_POST["description"],
+				'texte' => nl2br($_POST["description"]),
 				'n_ticket' => $lastID,
-				'date' => date("Y-m-d")
+				'date' => date("Y-m-d"),
+				'avancement' => 'af'
 				));
 header('Location: http://127.0.0.1/i-tech/showTicket.php?id='.$lastID);
 exit();

@@ -32,58 +32,36 @@
     ?>
   <div class="container">
       <h1>Liste des tickets</h1>
+      <div class="col-md-2 col-md-offset-10">
+        <button type="submit" class="btn btn-success" onclick="window.location.href='./newTicket.php'"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</button>
+      </div>
+      <br /><br />
       <table class="table">
       	<tr>
       		<th>Référence client</th>
       		<th>Date de livraison</th>
       		<th>Description</th>
-      		<th>Consulter le ticket</th>
+      		<th>Priorité</th>
+          <th><span class="glyphicon glyphicon-option-horizontal"></span></th>
       	</tr>
       	<?php 
     while ($data = $reponse->fetch()) {
     $id = $data["ID"];
     $ref_client = $data["REF_CLIENT"];
-    $type_client = $data["TYPE_CLIENT"];
-    $type_inter = $data["TYPE_INTER"];
+    $type_client = abbrToFull($data["TYPE_CLIENT"]);
+    $type_inter = abbrToFull($data["TYPE_INTER"]);
     $date_livraison = $data["DATE_LIVRAISON"];
     $facturation = $data["FACTURATION"];
     $n_bc = $data["N_BC"];
     $priorite = $data["PRIORITE"];
 
-    if ($type_client == 'col') {
-      $type_client = 'Collectivités';
-    }
-    else if ($type_client == 'pro') {
-      $type_client = 'Professionnels';
-    }
-    else if ($type_client == 'part') {
-      $type_client = 'Particuliers';
-    }
-    else if ($type_client == 'edu') {
-      $type_client = 'Éducation';
-    }
-
-    if ($type_inter == 'atel') {
-      $type_inter = 'Atelier';
-    }
-    else if ($type_inter == 'maint') {
-      $type_inter = 'Maintenance';
-    }
-    else if ($type_inter == 'mont') {
-      $type_inter = 'Montage';
-    }
-    else if ($type_inter == 'sav') {
-      $type_inter = 'Retour SAV';
-    }
-    else if ($type_inter == 'site') {
-      $type_inter = 'Intervention sur site';
-    }
+    
 
     if ($priorite == 0) $tr = '<tr class="success">';
     else if ($priorite == 1) $tr = '<tr class="warning">';
     else if ($priorite == 2) $tr = '<tr class="danger">';
 
-    echo $tr.'<td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_livraison.'</td><td>'.$type_inter.'</td><td><a href="showTicket.php?id='.$id.'"><span class="glyphicon glyphicon-search"></span></a></td></tr>';} ?>
+    echo $tr.'<td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_livraison.'</td><td>'.$type_inter.'</td><td>'.abbrToFull($priorite).'</td><td><a href="showTicket.php?id='.$id.'"><span class="glyphicon glyphicon-search"></span></a></td></tr>';} ?>
 
 </table>
   </div>

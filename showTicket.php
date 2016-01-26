@@ -69,6 +69,8 @@
               <dt>Facturation :</dt>
               <dd><?php if ($facturation) echo 'A facturer';
               else echo 'Sous maintenance / garantie'; ?></dd>
+              <dt>Priorité :</dt>
+              <dd><?php echo abbrToFull($priorite) ?></dd>
             </dl>
           </div>
           <div class="col-md-8">
@@ -76,38 +78,38 @@
               <div class="form-group">
                 <label for="desc" class="control-label col-md-3">Description :</label>
                 <div class="col-md-6">
-                  <p class="form-control-static" id="desc"><?php $data = $reponsedesc->fetch(); echo $data["TEXTE"].'<br />'.$data["DATE"]; ?></p>
+                  <p class="form-control-static" id="desc"><?php $data = $reponsedesc->fetch(); echo $data["TEXTE"] ?></p>
                 </div>
               
               
-                <label for="desc" class="control-label col-md-3">Avancement</label>
+                <label for="desc" class="control-label col-md-3"><?php echo abbrToFull($data['AVANCEMENT']).' ('.$data["DATE"].')' ?></label>
                 </div>
                 <?php while($data = $reponsedesc->fetch()) { ?>
                 <div class="form-group">
                 
                 <label for="modif" class="control-label col-md-3">Modif :</label>
                 <div class="col-md-6">
-                  <p class="form-control-static" id="desc"><?php echo $data["TEXTE"].'<br />'.$data["DATE"]; ?></p>
+                  <p class="form-control-static" id="desc"><?php echo $data["TEXTE"] ?></p>
                 </div>
-                <label for="desc" class="control-label col-md-3">Avancement</label>
+                <label for="desc" class="control-label col-md-3"><?php echo abbrToFull($data['AVANCEMENT']).' ('.$data["DATE"].')' ?></label>
                 </div>
 
                 <?php } ?>
                 <div class="well">
                 <div class="form-group">
-                <label for="modif" class="control-label col-md-3">Modif :</label>
-                <div class="col-md-6">
+                <label for="modif" class="control-label col-md-2">Modif :</label>
+                <div class="col-md-7">
                   <textarea id="modif" class="form-control" rows="5" required title="Modification " name="modif"></textarea>
                 </div>
                 <div class="col-md-2">
                   <div class="row">
                   <select id="avancement" name="avancement" class="form-control">
-                    <option value="af">A faire</option>
-                    <option value="ec">En cours</option>
-                    <option value="arc">En attente réponse client</option>
-                    <option value="ap">En attente pièce(s)</option>
-                    <option value="te">Terminé</option>
-                    <option value="tl">Terminé à livrer</option>
+                    <option value="af"><?php echo abbrToFull('af') ?></option>
+                    <option value="ec"><?php echo abbrToFull('ec') ?></option>
+                    <option value="arc"><?php echo abbrToFull('arc') ?></option>
+                    <option value="ap"><?php echo abbrToFull('ap') ?></option>
+                    <option value="te"><?php echo abbrToFull('te') ?></option>
+                    <option value="tl"><?php echo abbrToFull('tl') ?></option>
                   </select>
                 </div>
                 <div class="row">

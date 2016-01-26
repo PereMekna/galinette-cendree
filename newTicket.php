@@ -42,10 +42,10 @@
               <div class="col-md-4">
                 <select id="typeclient" title="Type de client" class="form-control" name="typeclient" required>
                   <option value="empty"></option>
-                  <option value="col">Collectivité</option>
-                  <option value="pro">Professionnel</option>
-                  <option value="part">Particulier</option>
-                  <option value="edu">Éducatif</option>
+                  <option value="col"><?php echo abbrToFull('col') ?></option>
+                  <option value="pro"><?php echo abbrToFull('pro') ?></option>
+                  <option value="part"><?php echo abbrToFull('part') ?></option>
+                  <option value="edu"><?php echo abbrToFull('edu') ?></option>
                 </select>
               </div>
               <label for="datepicker" class="control-label col-md-2">Date de livraison :</label>
@@ -58,11 +58,11 @@
               <div class="col-md-4">
                 <select id="typeinter" title="Type d'intervention" class="form-control" name="typeinter" required>
                   <option value="empty"></option>
-                  <option value="atel">Atelier</option>
-                  <option value="maint">Maintenance</option>
-                  <option value="mont">Montage</option>
-                  <option value="sav">Retour SAV</option>
-                  <option value="site">Intervention sur site</option>
+                  <option value="atel"><?php echo abbrToFull('atel') ?></option>
+                  <option value="maint"><?php echo abbrToFull('maint') ?></option>
+                  <option value="mont"><?php echo abbrToFull('mont') ?></option>
+                  <option value="sav"><?php echo abbrToFull('sav') ?></option>
+                  <option value="site"><?php echo abbrToFull('site') ?></option>
                 </select>
               </div>
               <label for="facturation" class="control-label col-md-2">Facturation :</label>
