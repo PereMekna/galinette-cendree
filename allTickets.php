@@ -32,16 +32,16 @@
     ?>
   <div class="container">
       <h1>Liste des tickets</h1>
-      <div class="col-md-2 col-md-offset-10">
-        <button type="submit" class="btn btn-success" onclick="window.location.href='./newTicket.php'"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</button>
+      <div class="pull-right">
+        <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
       </div>
       <br /><br />
-      <table class="table">
+      <table class="table table-hover">
       	<tr>
       		<th>Référence client</th>
       		<th>Date de livraison</th>
       		<th>Description</th>
-      		<th>Priorité</th>
+      		<th>Avancement</th>
           <th><span class="glyphicon glyphicon-option-horizontal"></span></th>
       	</tr>
       	<?php 
@@ -54,6 +54,8 @@
     $facturation = $data["FACTURATION"];
     $n_bc = $data["N_BC"];
     $priorite = $data["PRIORITE"];
+    $avancement = abbrToFull($data["AVANCEMENT"]);
+    $date_format = date("D d/m/Y", strtotime($date_livraison));
 
     
 
@@ -61,7 +63,7 @@
     else if ($priorite == 1) $tr = '<tr class="warning">';
     else if ($priorite == 2) $tr = '<tr class="danger">';
 
-    echo $tr.'<td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_livraison.'</td><td>'.$type_inter.'</td><td>'.abbrToFull($priorite).'</td><td><a href="showTicket.php?id='.$id.'"><span class="glyphicon glyphicon-search"></span></a></td></tr>';} ?>
+    echo $tr.'<td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td><td><a href="showTicket.php?id='.$id.'"><span class="glyphicon glyphicon-search"></span></a></td></tr>';} ?>
 
 </table>
   </div>

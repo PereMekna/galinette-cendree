@@ -38,6 +38,7 @@
     $facturation = $data["FACTURATION"];
     $n_bc = $data["N_BC"];
     $priorite = $data["PRIORITE"];
+    $avancement = abbrToFull($data["AVANCEMENT"]);
   }
 
 
@@ -51,7 +52,7 @@
   
     ?>
   <div class="container">
-      <h1>Ticket pour <?php echo $intitule?></h1>
+      <h1>Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
         <br /><br />
         <div class="row">
           <div class="col-md-4">
@@ -65,7 +66,7 @@
               <dt>Type d'intervention :</dt>
               <dd><?php echo $type_inter ?></dd>
               <dt>Date de livraison :</dt>
-              <dd><?php echo $date_livraison ?></dd>
+              <dd><?php echo date("D d/m/Y ", strtotime($date_livraison)) ?></dd>
               <dt>Facturation :</dt>
               <dd><?php if ($facturation) echo 'A facturer';
               else echo 'Sous maintenance / garantie'; ?></dd>
@@ -75,33 +76,42 @@
           </div>
           <div class="col-md-8">
             <form role="form" class="form-horizontal" action="addModif.php" method="post" >
+              <input type="hidden" id="idhidden" name="idhidden" value="<?php echo $id ?>" />
               <div class="form-group">
                 <label for="desc" class="control-label col-md-3">Description :</label>
                 <div class="col-md-6">
-                  <p class="form-control-static" id="desc"><?php $data = $reponsedesc->fetch(); echo $data["TEXTE"] ?></p>
+                  <p class="form-control-static text-justify" id="desc"><?php $data = $reponsedesc->fetch(); echo nl2br($data["TEXTE"]) ?></p>
                 </div>
               
-              
-                <label for="desc" class="control-label col-md-3"><?php echo abbrToFull($data['AVANCEMENT']).' ('.$data["DATE"].')' ?></label>
+                <div class="col-md-3">
+                  <a class="btn btn-default pull-right" role="button"href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
+                <p class="form-control-static">
+                <strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')' ?><br /></p>
                 </div>
+                </div>
+                <hr />
                 <?php while($data = $reponsedesc->fetch()) { ?>
                 <div class="form-group">
                 
                 <label for="modif" class="control-label col-md-3">Modif :</label>
                 <div class="col-md-6">
-                  <p class="form-control-static" id="desc"><?php echo $data["TEXTE"] ?></p>
+                  <p class="form-control-static text-justify" id="desc"><?php echo nl2br($data["TEXTE"]) ?></p>
                 </div>
-                <label for="desc" class="control-label col-md-3"><?php echo abbrToFull($data['AVANCEMENT']).' ('.$data["DATE"].')' ?></label>
+                <div class="col-md-3">
+                    <a class="btn btn-default pull-right" role="button"href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
+                <p class="form-control-static"><strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.$data["DATE"].')' ?></p>
                 </div>
+              </div>
+                <hr />
 
                 <?php } ?>
-                <div class="well">
+                <div class="well col-md-offset-1">
                 <div class="form-group">
                 <label for="modif" class="control-label col-md-2">Modif :</label>
                 <div class="col-md-7">
-                  <textarea id="modif" class="form-control" rows="5" required title="Modification " name="modif"></textarea>
+                  <textarea id="modif" class="form-control" rows="5" required title="Modification " name="modif" autofocus></textarea>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6 col-xs-10">
                   <div class="row">
                   <select id="avancement" name="avancement" class="form-control">
                     <option value="af"><?php echo abbrToFull('af') ?></option>

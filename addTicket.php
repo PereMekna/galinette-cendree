@@ -11,8 +11,14 @@ if ($_POST["facturation"] == "fac"){
 }
 else $fac = 0;
 
+if (!isset($_POST["labpriohidden"])) {
+	$priorite = 0;
+}
+else {
+	$priorite = $_POST["labpriohidden"];
+}
 
-$req = $db->prepare('INSERT INTO tickets(REF_CLIENT, TYPE_CLIENT, TYPE_INTER, DATE_LIVRAISON, FACTURATION, N_BC, PRIORITE) VALUES(:ref_client, :type_client, :type_inter, :date_livraison, :facturation, :n_bc, :priorite)');
+$req = $db->prepare('INSERT INTO tickets(REF_CLIENT, TYPE_CLIENT, TYPE_INTER, DATE_LIVRAISON, FACTURATION, N_BC, PRIORITE, AVANCEMENT) VALUES(:ref_client, :type_client, :type_inter, :date_livraison, :facturation, :n_bc, :priorite, :avancement)');
 $req->execute(array(
 				'ref_client' => $_POST["ref_client"],
 				'type_client' => $_POST["typeclient"],
@@ -20,14 +26,15 @@ $req->execute(array(
 				'date_livraison' => $_POST["datepicker"],
 				'facturation' => $fac,
 				'n_bc' => $_POST["bc"],
-				'priorite' => intval($_POST["labpriohidden"])));
+				'priorite' => intval($priorite),
+				'avancement' => 'af'));
 $lastID = $db->lastInsertId();
 
 $req = $db->prepare('INSERT INTO descriptions(TEXTE, N_TICKET, DATE, AVANCEMENT) VALUES(:texte, :n_ticket, :date, :avancement)');
 $req->execute(array(
-				'texte' => nl2br($_POST["description"]),
+				'texte' => $_POST["description"],
 				'n_ticket' => $lastID,
-				'date' => date("Y-m-d"),
+				'date' => date("Y-m-d H:i:s"),
 				'avancement' => 'af'
 				));
 header('Location: http://127.0.0.1/i-tech/showTicket.php?id='.$lastID);

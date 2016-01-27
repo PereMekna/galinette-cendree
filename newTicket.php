@@ -27,7 +27,7 @@
             <div class="form-group"> 
               <label for="customer" class="control-label col-md-2">Référence client :</label>
               <div class="col-md-4">
-                <input id="autocomplete" title="Référence client" class="form-control" name="ref_client" required>
+                <input id="autocomplete" title="Référence client" class="form-control" name="ref_client" required autofocus>
               </div>
               <div class="container col-md-6">
               <div class="panel panel-default">
