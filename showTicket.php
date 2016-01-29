@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -19,7 +20,13 @@
     <![endif]-->
   </head>
   <body>
-  <?php include('navbar.php');
+
+  <?php 
+  include('navbar.php');
+  if (!isset($_SESSION["login"])) {
+    header('Location: ./login.php');
+    exit();
+  }
   try {
     $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', '');
   }
@@ -86,7 +93,7 @@
                 <div class="col-md-3">
                   <a class="btn btn-default pull-right" role="button"href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
                 <p class="form-control-static">
-                <strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')' ?><br /></p>
+                <strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')<br />Par : '.$data["ID_USER"] ?><br /></p>
                 </div>
                 </div>
                 <hr />
@@ -99,7 +106,7 @@
                 </div>
                 <div class="col-md-3">
                     <a class="btn btn-default pull-right" role="button"href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
-                <p class="form-control-static"><strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.$data["DATE"].')' ?></p>
+                <p class="form-control-static"><strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.$data["DATE"].')<br />Par : '.$data["ID_USER"] ?></p>
                 </div>
               </div>
                 <hr />

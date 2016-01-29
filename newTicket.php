@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -19,7 +20,13 @@
     <![endif]-->
   </head>
   <body>
-  <?php include('navbar.php'); ?>
+  <?php 
+  include('navbar.php'); 
+  if (!isset($_SESSION["login"])) {
+    header('Location: ./login.php');
+    exit();
+  }
+  ?>
   <div class="container">
       <h1>Nouveau ticket <small id="labprio" class="form-control-static">priorité : <span class="glyphicon glyphicon-ban-circle" /></small></h1>
         <br /><br />

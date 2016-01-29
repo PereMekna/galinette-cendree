@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -20,7 +21,13 @@
     <![endif]-->
   </head>
   <body>
-    <?php include('navbar.php'); ?>
+    <?php 
+    include('navbar.php');
+    if (!isset($_SESSION["login"])) {
+      header('Location: ./login.php');
+      exit();
+    } ?>
+
     <div class="container">
       <h1>Tableau de bord</h1>
       <div class="col-xs-12 col-sm-6 col-md-4">

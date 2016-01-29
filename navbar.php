@@ -15,7 +15,11 @@
         <li id="newTicket" <?php if (preg_match('#newTicket.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="newTicket.php">Nouveau ticket</a></li>
         <li id="ticketList" <?php if (preg_match('#allTickets.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="allTickets.php">Tickets ouverts</a></li>
       </ul>
-      <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Louis Dupont</a></p>
+      <?php if (isset($_SESSION['login'])) {
+        echo '<p class="navbar-text navbar-right">Signed in as '.$_SESSION['login'].' <a href="logout.php" class="navbar-link"><span class="glyphicon glyphicon-log-out"></span></a></p>';
+      }
+      else echo '<p class="navbar-text navbar-right">Connexion obligatoire</p>' ?>
+      
     </div><!--/.nav-collapse -->
   </div>
 </nav>
