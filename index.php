@@ -23,73 +23,41 @@
   <body>
     <?php 
     include('navbar.php');
+    $max_row = 3;
     if (!isset($_SESSION["login"])) {
       header('Location: ./login.php');
       exit();
-    } ?>
+    }
+     ?>
 
     <div class="container">
-      <h1>Tableau de bord</h1>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="panel panel-default">
-        <div class="panel-heading">Professionnels <span class="badge">2</span></div>
-        <div class="panel-body">
-        <div class="alert alert-danger">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour AZERTY</strong> 1 jour(s) avant la date de livraison 
-        </div>
-        <div class="alert alert-danger">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour YTREEZA</strong> 2 jour(s) avant la date de livraison 
+      <h1>Tableau de bord <a class="btn btn-success pull-right" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a></h1>
+      
+      <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <?php 
+        $cat = "pro";
+        include('getAlert.php'); ?>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <?php 
+        $cat = "col";
+        include('getAlert.php'); ?>
         </div>
       </div>
+      <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6">
+        <?php 
+        $cat = "part";
+        include('getAlert.php'); ?>
       </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="panel panel-default">
-        <div class="panel-heading">Collectivités <span class="badge">3</span></div>
-        <div class="panel-body">
-        <div class="alert alert-danger">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour UIOPOIUY</strong> 0 jour(s) avant la date de livraison 
-        </div>
-        <div class="alert alert-danger">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour ARTERZAA</strong> 1 jour(s) avant la date de livraison 
-        </div>
-        <div class="alert alert-warning">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour ZQQFEGV</strong> 3 jour(s) avant la date de livraison 
-        </div>
-        </div>
+      <div class="col-xs-12 col-sm-6 col-md-6">
+
+        <?php 
+        $cat = "edu";
+        include('getAlert.php'); ?>
       </div>
     </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="panel panel-default">
-        <div class="panel-heading">Particuliers <span class="badge">1</span></div>
-        <div class="panel-body">
-        <div class="alert alert-warning">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour QZQFQE</strong> 3 jour(s) avant la date de livraison 
-        </div>
-      </div>
-    </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="panel panel-default">
-        <div class="panel-heading">Éducatif <span class="badge">2</span></div>
-        <div class="panel-body">
-        <div class="alert alert-danger">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour AERTYUUYTRE</strong> 0 jour(s) avant la date de livraison 
-        </div>
-        <div class="alert alert-warning">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Ticket pour BVDZZRT</strong> 2 jour(s) avant la date de livraison 
-        </div>
-      </div>
-    </div>
-      </div>
     </div>
     <!-- /.container -->
 

@@ -37,8 +37,8 @@
   
     ?>
   <div class="container">
-      <h1>Liste des tickets</h1>
-      <div class="pull-right">  
+      <h1>Liste des tickets
+      <span class="pull-right">  
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -61,7 +61,7 @@
           </ul>
         </span>
         <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
-      </div>
+      </span></1>
       <br /><br />
       <div class="table-responsive">
       <table class="table table-hover">
@@ -71,7 +71,7 @@
           <th>Date de livraison</th>
           <th>Description</th>
           <th>Avancement</th>
-          <th><span class="glyphicon glyphicon-option-horizontal"></span></th>
+          <th><span class="glyphicon glyphicon-bell"></span></th>
         </tr>
       </thead>
       <tbody>
@@ -90,11 +90,11 @@
 
     
 
-    if ($priorite == 0) $tr = '<tr class="success">';
-    else if ($priorite == 1) $tr = '<tr class="warning">';
-    else if ($priorite == 2) $tr = '<tr class="danger">';
+    if ($priorite == 0) $tr = '<td class="success">';
+    else if ($priorite == 1) $tr = '<td class="warning">';
+    else if ($priorite == 2) $tr = '<td class="danger">';
 
-    echo $tr.'<td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td><td><a href="showTicket.php?id='.$id.'"><span class="glyphicon glyphicon-search"></span></a></td></tr>';} ?>
+    echo '<tr class="clickable-row" data-href="./showTicket.php?id='.$id.'"><td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td>'.$tr.'&nbsp;&nbsp;</td></tr>';} ?>
   </tbody>
   </table>
 </div>
@@ -126,6 +126,12 @@
         
      console.log( options );
      return false;
+  });
+
+  jQuery(document).ready(function($) {
+      $(".clickable-row").click(function() {
+          window.document.location = $(this).data("href");
+      });
   });
 
   </script>

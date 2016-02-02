@@ -139,7 +139,7 @@
                 <div class="col-md-7">
                   <textarea id="modif" class="form-control" rows="5" required title="Modification " name="modif" autofocus></textarea>
                 </div>
-                <div class="col-md-2 col-sm-6 col-xs-10">
+                <div class="col-md-2 col-sm-6 col-xs-9" id="avancement-submit">
                   <div class="row">
                   <select id="avancement" name="avancement" class="form-control">
                     <option value="af"><?php echo abbrToFull('af') ?></option>
