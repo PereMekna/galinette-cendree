@@ -30,16 +30,21 @@
   <div class="container">
       <h1>Nouveau ticket <small id="labprio" class="form-control-static">priorité : <span class="glyphicon glyphicon-ban-circle" /></small></h1>
         <br /><br />
-          <form role="form" class="form-horizontal" action="addTicket.php" method="post" >
+          <form role="form" class="form-horizontal" action="addTicket.php" method="post" enctype="multipart/form-data" >
             <div class="form-group"> 
               <label for="customer" class="control-label col-md-2">Référence client :</label>
               <div class="col-md-4">
+                <div class="input-group">
                 <input id="autocomplete" title="Référence client" class="form-control" name="ref_client" required autofocus>
+                <span class="input-group-btn">
+                  <button id="lock" class="btn btn-default" type="button" disabled><span class="glyphicon glyphicon-pencil"></span>&nbsp;</button>
+                </span>
               </div>
+            </div>
               <div class="container col-md-6">
               <div class="panel panel-default">
               <div id="description" class="panel-body">
-                Rentrez une référence client
+                <span class="glyphicon glyphicon-exclamation-sign"></span> Rentrez une référence client
               </div>
               </div>
               </div>
@@ -80,6 +85,24 @@
                 </select>
               </div>
             </div>
+            <div class="retsav">
+            <div class="form-group"  id="retsav1" >
+              <label for="bc" class="control-label col-md-2">Marque :</label>
+              <div class="col-md-4">
+                  <input type="text" class="form-control" id="marque" name="marque" />
+              </div>
+              <label for="bc" class="control-label col-md-2">Modèle :</label>
+              <div class="col-md-4">
+                  <input type="text" class="form-control" id="modele" name="modele" />
+              </div>
+            </div>
+            <div class="form-group" display="none" id="retsav2" >
+              <label for="bc" class="control-label col-md-2">N° série :</label>
+              <div class="col-md-4">
+                  <input type="text" class="form-control" id="no" name="noserie" />
+              </div>
+            </div>
+          </div>
             <div class="form-group">
               <label for="bc" class="control-label col-md-2">N° bon de commande :</label>
               <div class="col-md-4">
@@ -102,12 +125,12 @@
               </div>
               <label for="bc" class="control-label col-md-2">Fichier(s) à ajouter :</label>
               <div class="col-md-4">
-                  <input type="file" class="form-control" id="file" multiple />
+                  <input type="file" class="form-control" id="file" name="files_upload[]" multiple />
               </div>
               
               </div>
             <div class="form-group"> 
-                <div class="col-sm-offset-2 col-sm-4">
+                <div class="col-md-offset-2 col-md-4">
                   <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Ajouter le ticket</button>
                 </div>
               </div>
@@ -120,6 +143,16 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script>
+      $(function() {
+        $('.retsav').hide();
+      $('#typeinter').change(function(){
+          if($('#typeinter').val() == 'sav') {
+              $('.retsav').fadeIn();
+          } else {
+              $('.retsav').fadeOut(); 
+          } 
+      });
+  });
 
     function showCustomer(str) {
     if (str == "") {
@@ -147,6 +180,8 @@
       minLength: 3,
       select : function(event, ui){ // lors de la sélection d'une proposition
         showCustomer(ui.item.value); // on ajoute la description de l'objet dans un bloc
+        $("#autocomplete").prop("readonly", true);
+        $("#lock").prop("disabled", false);
       }
     });
     $( "#dialog-link, #icons li" ).hover(
@@ -189,6 +224,11 @@
       var parsedate = date.getFullYear()+"-"+(month)+"-"+(day) ;
       $("#datepicker").val(parsedate);
 
+    });
+
+    $("#lock").click(function(){
+      $("#autocomplete").prop("readonly", false);
+      $("#lock").prop("disabled", true);
     });
     </script>
   </body>

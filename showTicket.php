@@ -39,8 +39,8 @@
   $requete = $db->prepare("SELECT * FROM CLIENTS WHERE NUMERO = ?");
   while ($data = $reponse->fetch()) {
     $ref_client = $data["REF_CLIENT"];
-    $type_client = abbrToFull($data["TYPE_CLIENT"]);
-    $type_inter = abbrToFull($data["TYPE_INTER"]);
+    $type_client = $data["TYPE_CLIENT"];
+    $type_inter = $data["TYPE_INTER"];
     $date_livraison = $data["DATE_LIVRAISON"];
     $facturation = $data["FACTURATION"];
     $n_bc = $data["N_BC"];
@@ -56,22 +56,35 @@
     $tel = $data["TEL"];
   }
 
+  if ($type_inter == "sav") {
+    $requete = $db->prepare("SELECT * FROM sav WHERE N_TICKET = ?");
+    $requete->execute(array($id));
+    $sav_marque = "non renseigné";
+    $sav_modele = "non renseigné";
+    $sav_n_serie = "non renseigné";
+    while ($data = $requete->fetch()) {
+      $sav_marque = $data["MARQUE"];
+      $sav_modele = $data["MODELE"];
+      $sav_n_serie = $data["N_SERIE"];
+    }
+  }
+
   
     ?>
   <div class="container">
       <h1>Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
         <br /><br />
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 well well-sm">
             <dl class="dl-horizontal">
               <dt>Client :</dt>
-              <dd><a href="#" title="<?php echo $intitule ?>" data-toggle="popover" data-placement="auto" data-trigger="focus" data-content="<?php echo 'Réf : '.$ref_client.' / Mail : '.$mail.' / Tél : '.$tel ?>"><?php echo $intitule ?></a></dd>
+              <dd><a href="#" title="<?php echo $intitule ?>" data-toggle="popover" data-placement="auto" data-trigger="focus" data-content="<?php echo 'Réf : '.$ref_client.' / Mail : '.$mail.' / Tél : '.$tel ?>"><?php echo $ref_client ?></a></dd>
               <dt>N° BC :</dt>
               <dd><?php echo $n_bc ?></dd>
               <dt>Type de client :</dt>
-              <dd><?php echo $type_client ?></dd>
+              <dd><?php echo abbrToFull($type_client) ?></dd>
               <dt>Type d'intervention :</dt>
-              <dd><?php echo $type_inter ?></dd>
+              <dd><?php echo abbrToFull($type_inter) ?></dd>
               <dt>Date de livraison :</dt>
               <dd><?php echo date("D d/m/Y ", strtotime($date_livraison)) ?></dd>
               <dt>Facturation :</dt>
@@ -79,6 +92,14 @@
               else echo 'Sous maintenance / garantie'; ?></dd>
               <dt>Priorité :</dt>
               <dd><?php echo abbrToFull($priorite) ?></dd>
+              <?php if ($type_inter == "sav") { ?>
+              <dt>Marque :</dt>
+              <dd><?php echo $sav_marque ?></dd>
+              <dt>Modèle :</dt>
+              <dd><?php echo $sav_modele ?></dd>
+              <dt>N° série :</dt>
+              <dd><?php echo $sav_n_serie ?></dd>
+              <?php } ?>
             </dl>
           </div>
           <div class="col-md-8">

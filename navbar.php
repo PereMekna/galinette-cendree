@@ -16,7 +16,7 @@
         <li id="ticketList" <?php if (preg_match('#allTickets.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="allTickets.php">Tickets ouverts</a></li>
       </ul>
       <?php if (isset($_SESSION['login'])) {
-        echo '<p class="navbar-text navbar-right">Signed in as '.$_SESSION['login'].' <a href="logout.php" class="navbar-link"><span class="glyphicon glyphicon-log-out"></span></a></p>';
+        echo '<p class="navbar-text navbar-right">Signed in as '.$_SESSION['login'].' <a href="logout.php" class="navbar-link"> <span class="glyphicon glyphicon-log-out"></span></a></p>';
       }
       else echo '<p class="navbar-text navbar-right">Connexion obligatoire</p>' ?>
       

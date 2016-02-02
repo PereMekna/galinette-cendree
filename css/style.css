@@ -1,3 +1,14 @@
 body {
 	padding-top :70px;
 }
+
+.alert-danger {
+	color : #FFE4E4;
+	background-color: #FF4A4A;
+}
+
+.alert-warning {
+    color: #FFECCA;
+    background-color: #F78816;
+    border-color: #faebcc;
+}
