@@ -75,8 +75,9 @@
       <h1>Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
         <br /><br />
         <div class="row">
-          <div class="col-md-4 well well-sm">
-            <dl class="dl-horizontal">
+          <div class="col-md-4">
+            <div class="panel panel-default">
+            <?php /*<!--<dl class="dl-horizontal">
               <dt>Client :</dt>
               <dd><a href="#" title="<?php echo $intitule ?>" data-toggle="popover" data-placement="auto" data-trigger="focus" data-content="<?php echo 'Réf : '.$ref_client.' / Mail : '.$mail.' / Tél : '.$tel ?>"><?php echo $ref_client ?></a></dd>
               <dt>N° BC :</dt>
@@ -100,7 +101,56 @@
               <dt>N° série :</dt>
               <dd><?php echo $sav_n_serie ?></dd>
               <?php } ?>
-            </dl>
+            </dl>-->*/?>
+            <table class="table table-show">
+              <tr>
+                <td>Client</td>
+                <td><a href="#" title="<?php echo $intitule ?>" data-toggle="popover" data-placement="auto" data-trigger="focus" data-content="<?php echo 'Réf : '.$ref_client.' / Mail : '.$mail.' / Tél : '.$tel ?>"><?php echo $ref_client ?></a>
+              </tr>
+              <tr>
+                <td>N° BC</td>
+                <td><?php echo $n_bc ?></td>
+              </tr>
+              <tr>
+                <td>Type de client</td>
+                <td><?php echo abbrToFull($type_client) ?></td>
+              </tr>
+              <tr>
+                <td>Type d'intervention</td>
+                <td><?php echo abbrToFull($type_inter) ?></td>
+              </tr>
+              <tr>
+                <td>Date de livraison</td>
+                <td><?php echo date("D d/m/Y ", strtotime($date_livraison)) ?></td>
+              </tr>
+              <tr>
+                <td>Facturation</td>
+                <td><?php if ($facturation) echo 'A facturer';
+              else echo 'Sous maintenance / garantie'; ?></td>
+              </tr>
+              <tr>
+                <td>Priorité</td>
+                <td><?php echo abbrToFull($priorite) ?></td>
+              </tr>
+              <?php if ($type_inter == "sav") { ?>
+              <tr>
+                <td>Marque</td>
+                <td><?php echo $sav_marque ?></td>
+              </tr>
+              <tr>
+                <td>Modèle</td>
+                <td><?php echo $sav_modele ?></td>
+              </tr>
+              <tr>
+                <td>N° série</td>
+                <td><?php echo $sav_n_serie; } ?></td>
+              </tr>
+            </table>
+            <div class="panel-footer">
+                Détails ticket
+            </div>
+          </div>
+
           </div>
           <div class="col-md-8">
             <form role="form" class="form-horizontal" action="addModif.php" method="post" >
@@ -127,7 +177,7 @@
                 </div>
                 <div class="col-md-3">
                     <a class="btn btn-default pull-right" role="button"href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
-                <p class="form-control-static"><strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.$data["DATE"].')<br />Par : '.$data["ID_USER"] ?></p>
+                <p class="form-control-static"><strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')<br />Par : '.$data["ID_USER"] ?></p>
                 </div>
               </div>
                 <hr />

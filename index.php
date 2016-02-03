@@ -31,7 +31,10 @@
      ?>
 
     <div class="container">
-      <h1>Tableau de bord <a class="btn btn-success pull-right" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a></h1>
+      <h1>Tableau de bord
+      <span class="pull-right">
+      <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
+      </span></h1>
       
       <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
