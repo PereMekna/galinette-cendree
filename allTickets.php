@@ -25,43 +25,33 @@
   if (!isset($_SESSION["login"])) {
     header('Location: ./login.php');
     exit();
-  }
-  try {
-    $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', '');
-  }
-  catch (Exception $e) {
-      die('Erreur : ' . $e->getMessage());
-  }
-  $reponse = $db->query('SELECT * FROM tickets');
-
-  
-    ?>
+  } ?>
   <div class="container">
-      <h1>Liste des tickets
+    <h1>Liste des tickets
       <span class="pull-right">  
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Afficher les catégories</li>
-            <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Atelier</a></li>
-            <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Maintenance</a></li>
-            <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Montage</a></li>
-            <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Retour SAV</a></li>
-            <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp;Intervention sur site</a></li>
+            <li><a href="#" class="small" data-value="atel" tabIndex="-1"><input type="checkbox" checked />&nbsp;Atelier</a></li>
+            <li><a href="#" class="small" data-value="maint" tabIndex="-1"><input type="checkbox" checked />&nbsp;Maintenance</a></li>
+            <li><a href="#" class="small" data-value="mont" tabIndex="-1"><input type="checkbox" checked />&nbsp;Montage</a></li>
+            <li><a href="#" class="small" data-value="sav" tabIndex="-1"><input type="checkbox" checked />&nbsp;Retour SAV</a></li>
+            <li><a href="#" class="small" data-value="site" tabIndex="-1"><input type="checkbox" checked />&nbsp;Intervention sur site</a></li>
           </ul>
         </span>
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Type de client</li>
-            <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Professionel</a></li>
-            <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp;Particulier</a></li>
-            <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp;Collectivité</a></li>
-            <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp;Éducation</a></li>
+            <li><a href="#" class="small" data-value="pro" tabIndex="-1"><input type="checkbox" checked />&nbsp;Professionel</a></li>
+            <li><a href="#" class="small" data-value="part" tabIndex="-1"><input type="checkbox" checked />&nbsp;Particulier</a></li>
+            <li><a href="#" class="small" data-value="col" tabIndex="-1"><input type="checkbox" checked />&nbsp;Collectivité</a></li>
+            <li><a href="#" class="small" data-value="edu" tabIndex="-1"><input type="checkbox" checked />&nbsp;Éducation</a></li>
           </ul>
         </span>
         <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
-      </span></1>
+      </span></h1>
       <br /><br />
       <div class="table-responsive">
       <table class="table table-hover">
@@ -74,68 +64,71 @@
           <th><span class="glyphicon glyphicon-bell"></span></th>
         </tr>
       </thead>
-      <tbody>
-        <?php 
-    while ($data = $reponse->fetch()) {
-    $id = $data["ID"];
-    $ref_client = $data["REF_CLIENT"];
-    $type_client = abbrToFull($data["TYPE_CLIENT"]);
-    $type_inter = abbrToFull($data["TYPE_INTER"]);
-    $date_livraison = $data["DATE_LIVRAISON"];
-    $facturation = $data["FACTURATION"];
-    $n_bc = $data["N_BC"];
-    $priorite = $data["PRIORITE"];
-    $avancement = abbrToFull($data["AVANCEMENT"]);
-    $date_format = date("D d/m/Y", strtotime($date_livraison));
+      <tbody id="jtable">
+        </tbody>
+        </table>
+      </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="jquery-ui.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+        var options = ["maint", "atel", "mont", "sav", "site", "pro", "part", "col", "edu"];
 
-    
 
-    if ($priorite == 0) $tr = '<td class="success">';
-    else if ($priorite == 1) $tr = '<td class="warning">';
-    else if ($priorite == 2) $tr = '<td class="danger">';
+        $( '.dropdown-menu a' ).on( 'click', function( event ) {
 
-    echo '<tr class="clickable-row" data-href="./showTicket.php?id='.$id.'"><td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td>'.$tr.'&nbsp;&nbsp;</td></tr>';} ?>
-  </tbody>
-  </table>
-</div>
-  </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="jquery-ui.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <script>
-  var options = [];
+           var $target = $( event.currentTarget ),
+               val = $target.attr( 'data-value' ),
+               $inp = $target.find( 'input' ),
+               idx;
 
-  $( '.dropdown-menu a' ).on( 'click', function( event ) {
+           if ( ( idx = options.indexOf( val ) ) > -1 ) {
+              options.splice( idx, 1 );
+              setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+           } else {
+              options.push( val );
+              setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+           }
 
-     var $target = $( event.currentTarget ),
-         val = $target.attr( 'data-value' ),
-         $inp = $target.find( 'input' ),
-         idx;
+           $( event.target ).blur();
+           var url = 'lt.php?';
+           $.each( options, function( index, value ) {
+             switch (value) {
+                case 'atel': url+='atel=1&'; break;
+                case 'maint': url+='maint=1&'; break;
+                case 'mont': url+='mont=1&'; break;
+                case 'sav': url+='sav=1&'; break;
+                case 'site': url+='site=1&'; break;
+                case 'pro': url+='pro=1&'; break;
+                case 'part': url+='part=1&'; break;
+                case 'col': url+='col=1&'; break;
+                case 'edu': url+='edu=1&'; break;
+             }
+           });
+            url = url.substring(0,url.length-1);
+            console.log( options);
+              
+           $('#jtable').load(url);
+           return false;
 
-     if ( ( idx = options.indexOf( val ) ) > -1 ) {
-        options.splice( idx, 1 );
-        setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
-     } else {
-        options.push( val );
-        setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
-     }
+        });
 
-     $( event.target ).blur();
-        
-     console.log( options );
-     return false;
-  });
+        jQuery(document).ready(function($) {
+          $('#jtable').load('lt.php');
+            $(".clickable-row").click(function() {
+                window.document.location = $(this).data("href");
 
-  jQuery(document).ready(function($) {
-      $(".clickable-row").click(function() {
-          window.document.location = $(this).data("href");
-      });
-  });
+            });
+        });
 
-  </script>
-  <?php
-  $reponse->closeCursor(); ?>
+
+
+        </script>
+        <?php
+        //$reponse->closeCursor(); ?>
+  
   </body>
 </html>

@@ -162,7 +162,7 @@
                 </div>
               
                 <div class="col-md-3">
-                  <a class="btn btn-default pull-right" role="button"href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
+                  <a class="btn btn-default pull-right" role="button" href="editModif.php?id=<?php echo $data["ID"]; ?>"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
                 <p class="form-control-static">
                 <strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')<br />Par : '.$data["ID_USER"] ?><br /></p>
                 </div>
@@ -176,7 +176,7 @@
                   <p class="form-control-static text-justify" id="desc"><?php echo nl2br($data["TEXTE"]) ?></p>
                 </div>
                 <div class="col-md-3">
-                    <a class="btn btn-default pull-right" role="button"href="#"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
+                    <a class="btn btn-default pull-right" role="button" href="editModif.php?id=<?php echo $data["ID"]; ?>"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
                 <p class="form-control-static"><strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')<br />Par : '.$data["ID_USER"] ?></p>
                 </div>
               </div>
