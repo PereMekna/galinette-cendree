@@ -2,12 +2,10 @@
     require_once('dbConn.php');
 
     $count = 0;
-    $req = "SELECT * FROM tickets ORDER BY PRIORITE DESC";
-    $requete = $db->query($req);
+    $req = "SELECT * FROM tickets WHERE TYPE_CLIENT = ? ORDER BY PRIORITE DESC";
+    $requete = $db->prepare($req);
+    $requete->execute(array($cat));
     $nbrow = $db->query("SELECT FOUND_ROWS()")->fetchColumn();
-
-    //$requete->execute(array($cat));
-    //$nbrow = $requete->rowCount();
 
     echo '<div class="panel panel-default">
         <div class="panel-heading">'.abbrToFull($cat).' <span class="badge">'.$nbrow.'</span></div>
