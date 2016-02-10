@@ -171,7 +171,7 @@
                 document.getElementById("description").innerHTML = xmlhttp.responseText;
             }
         };
-        xmlhttp.open("GET","getCustomer.php?q="+str,true);
+        xmlhttp.open("GET","./getCustomer.php?q="+str,true);
         xmlhttp.send();
     }
 }

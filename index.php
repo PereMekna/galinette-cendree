@@ -40,25 +40,25 @@
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "pro";
-        include('getAlert.php'); ?>
+        include('./getAlert.php'); ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "col";
-        include('getAlert.php'); ?>
+        include('./getAlert.php'); ?>
         </div>
       </div>
       <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "part";
-        include('getAlert.php'); ?>
+        include('./getAlert.php'); ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
 
         <?php 
         $cat = "edu";
-        include('getAlert.php'); ?>
+        include('./getAlert.php'); ?>
       </div>
     </div>
     </div>
