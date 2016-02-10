@@ -7,8 +7,10 @@
 
     $count = 0;
 
-    $requete = $db->prepare("SELECT * FROM TICKETS WHERE TYPE_CLIENT = :type_client ORDER BY PRIORITE DESC");
-    $requete->execute(array('type_client' => $cat));
+    /*$requete = $db->prepare("SELECT * FROM TICKETS WHERE TYPE_CLIENT = :type_client ORDER BY PRIORITE DESC");
+    $requete->execute(array('type_client' => $cat));*/
+    $requete = $db->query("SELECT * FROM TICKETS WHERE TYPE_CLIENT = 'col' ORDER BY PRIORITE DESC");
+    //$requete->execute(array('type_client' => $cat));
     $nbrow = $requete->rowCount();
 
     echo '<div class="panel panel-default">
