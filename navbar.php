@@ -24,4 +24,6 @@
   </div>
 </nav>
 
-<?php include('inc/functions.php'); ?>
+<?php include('inc/functions.php'); 
+ini_set('display_errors',1);
+error_reporting(-1);?>
