@@ -13,7 +13,7 @@
         <div class="panel-heading">'.abbrToFull($cat).' <span class="badge">'.$nbrow.'</span></div>
         <div class="panel-body">';
 
-    while ($data = $requete->fetch()) {
+    while ($data = $requete->fetch(PDO::FETCH_ASSOC)) {
     	if ($data["PRIORITE"] == 0) $class = "alert alert-success";
     	else if ($data["PRIORITE"] == 1) $class = "alert alert-warning";
     	else $class = "alert alert-danger";
