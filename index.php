@@ -40,25 +40,25 @@
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "pro";
-        include($_SERVER['DOCUMENT_ROOT'].'/getAlert.php'); ?>
+        include($_SERVER['DOCUMENT_ROOT'].'/galinette-cendree/getAlert.php'); ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "col";
-        include($_SERVER['DOCUMENT_ROOT'].'/getAlert.php'); ?>
+        include($_SERVER['DOCUMENT_ROOT'].'/galinette-cendree/getAlert.php'); ?>
         </div>
       </div>
       <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "part";
-        include($_SERVER['DOCUMENT_ROOT'].'/getAlert.php'); ?>
+        include($_SERVER['DOCUMENT_ROOT'].'/galinette-cendree/getAlert.php'); ?>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-6">
 
         <?php 
         $cat = "edu";
-        include($_SERVER['DOCUMENT_ROOT'].'/getAlert.php'); ?>
+        include($_SERVER['DOCUMENT_ROOT'].'/galinette-cendree/getAlert.php'); ?>
       </div>
     </div>
     </div>
