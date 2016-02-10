@@ -2,7 +2,7 @@
 include('inc/functions.php');
 
 try {
-    $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
   }
   catch (Exception $e) {
       die('Erreur : ' . $e->getMessage());
@@ -30,7 +30,7 @@ try {
     $req = 'SELECT * FROM tickets';
   }
 
-  //echo '<tr><td>'.$req.'</td></tr>';
+  echo '<tr><td>'.$req.'</td></tr>';
 
 
 

@@ -2,7 +2,7 @@
 session_start();
 if (isset($_POST["idhidden"]) && isset($_POST["modif"])) {
 	try {
-		$db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', '');
+		$db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
 	}
 	catch (Exception $e) {
 	    die('Erreur : ' . $e->getMessage());
