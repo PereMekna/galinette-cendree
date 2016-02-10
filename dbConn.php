@@ -1,5 +1,5 @@
 <?php try {
-      $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+      $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', '');
     }
     catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
