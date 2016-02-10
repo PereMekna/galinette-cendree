@@ -27,12 +27,7 @@
     header('Location: ./login.php');
     exit();
   }
-  try {
-    $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-  }
-  catch (Exception $e) {
-      die('Erreur : ' . $e->getMessage());
-  }
+  require_once('dbConn.php');
   $id = $_GET['id'];
   $reponse = $db->query('SELECT * FROM tickets where ID='.$id);
   $reponsedesc = $db->query('SELECT * FROM descriptions where N_TICKET='.$id);

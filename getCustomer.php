@@ -2,14 +2,7 @@
 		<?php
 		$q = $_GET['q'];
 
-		try
-			{
-			$db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-			}
-			catch (Exception $e)
-			{
-		        die('Erreur : ' . $e->getMessage());
-			}
+		require_once('dbConn.php');
 
 		$requete = $db->prepare("SELECT * FROM CLIENTS WHERE NUMERO = :numero");
 		$requete->execute(array('numero' => $_GET['q']));

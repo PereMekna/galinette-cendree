@@ -21,12 +21,7 @@
   <body>
   <?php 
   $err ='';
-  try {
-    $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-  }
-  catch (Exception $e) {
-      die('Erreur : ' . $e->getMessage());
-  }
+  require_once('dbConn.php');
   if (isset($_POST["password"]) && isset($_POST["password_conf"]) && $_POST["password_conf"] != $_POST["password"]) {
     $err .= '<span class="label label-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> Les mots de passe que vous avez saisis ne correspondent pas.</span><br />';
   }

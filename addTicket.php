@@ -1,12 +1,7 @@
 <?php
 session_start();
 if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
-	try {
-		$db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-	}
-	catch (Exception $e) {
-	    die('Erreur : ' . $e->getMessage());
-	}
+	require_once('dbConn.php');
 
 	if ($_POST["facturation"] == "fac"){
 		$fac = 1;

@@ -1,9 +1,5 @@
-<?php try {
-      $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-    }
-    catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
+<?php 
+    require_once('dbConn.php');
 
     $count = 0;
 
