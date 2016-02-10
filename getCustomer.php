@@ -4,7 +4,7 @@
 
 		require_once('dbConn.php');
 
-		$requete = $db->prepare("SELECT * FROM CLIENTS WHERE NUMERO = :numero");
+		$requete = $db->prepare("SELECT * FROM clients WHERE NUMERO = :numero");
 		$requete->execute(array('numero' => $_GET['q']));
 
 		while ($data = $requete->fetch())

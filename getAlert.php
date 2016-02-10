@@ -2,7 +2,7 @@
     require_once('dbConn.php');
 
     $count = 0;
-    $req = "SELECT * FROM TICKETS ORDER BY PRIORITE DESC";
+    $req = "SELECT * FROM tickets ORDER BY PRIORITE DESC";
     $requete = $db->query($req);
     $nbrow = $db->query("SELECT FOUND_ROWS()")->fetchColumn();
 
