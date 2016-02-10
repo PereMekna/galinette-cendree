@@ -2,10 +2,10 @@
     require_once('dbConn.php');
 
     $count = 0;
-
-    $requete = $db->prepare("SELECT * FROM TICKETS WHERE TYPE_CLIENT = :type_client ORDER BY PRIORITE DESC");
+    $req = "SELECT * FROM TICKETS WHERE TYPE_CLIENT = ? ORDER BY PRIORITE DESC";
+    $requete = $db->prepare($req);
 ;
-    $requete->execute(array('type_client' => $cat));
+    $requete->execute(array($cat));
     $nbrow = $requete->rowCount();
 
     echo '<div class="panel panel-default">
