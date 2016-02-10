@@ -23,12 +23,7 @@
     <?php 
     $err = '';
     $id = $_GET["id"];
-    try {
-      $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-    }
-    catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
+    require_once('dbConn.php');
     if (isset($_GET["id"])) {
       $req = $db->prepare('SELECT * FROM descriptions WHERE ID = :id');
       $req->execute(array(

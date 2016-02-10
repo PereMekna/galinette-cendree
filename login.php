@@ -21,12 +21,7 @@
   <body>
     <?php 
     $err = '';
-    try {
-      $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-    }
-    catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
+    require_once('dbConn.php');
     if (isset($_POST["login"]) && isset($_POST["password"])) {
       $req = $db->prepare('SELECT * FROM users WHERE login = :login AND password = :password');
       $req->execute(array(

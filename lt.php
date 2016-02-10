@@ -1,12 +1,7 @@
 <?php 
 include('inc/functions.php');
 
-try {
-    $db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
-  }
-  catch (Exception $e) {
-      die('Erreur : ' . $e->getMessage());
-  }
+require_once('dbConn.php');
 
   $req = 'SELECT * FROM tickets WHERE (';
   if (isset($_GET['atel'])) $req .= 'type_inter = "atel" OR ';
