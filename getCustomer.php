@@ -15,8 +15,8 @@
 		        die('Erreur : ' . $e->getMessage());
 			}
 
-		$requete = $db->prepare("SELECT * FROM CLIENTS WHERE NUMERO = ?");
-		$requete->execute(array($_GET['q']));
+		$requete = $db->prepare("SELECT * FROM CLIENTS WHERE NUMERO = :numero");
+		$requete->execute(array('numero' => $_GET['q']));
 
 		while ($data = $requete->fetch())
 		{
