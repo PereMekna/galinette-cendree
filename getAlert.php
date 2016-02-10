@@ -4,9 +4,10 @@
     $count = 0;
     $req = "SELECT * FROM TICKETS ORDER BY PRIORITE DESC";
     $requete = $db->query($req);
+    $nbrow = $db->query("SELECT FOUND_ROWS()")->fetchColumn();
 
     //$requete->execute(array($cat));
-    $nbrow = $requete->rowCount();
+    //$nbrow = $requete->rowCount();
 
     echo '<div class="panel panel-default">
         <div class="panel-heading">'.abbrToFull($cat).' <span class="badge">'.$nbrow.'</span></div>
