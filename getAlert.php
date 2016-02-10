@@ -6,6 +6,7 @@
     }
 
     $count = 0;
+    $cat = 'col';
 
     $requete = $db->prepare("SELECT * FROM TICKETS WHERE TYPE_CLIENT = :type_client ORDER BY PRIORITE DESC");
     $requete->execute(array('type_client' => $cat));

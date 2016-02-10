@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	</head>
-	<body>
+
 		<?php
 		$q = $_GET['q'];
 
@@ -25,5 +21,3 @@
 			echo '<div class="row"><label class="control-label col-md-4">Mail :</label><div class="col-md-8"><p class="form-control-static">'.$data['MAIL'].'</p></div></div>';
 		}
 		?>
-	</body>
-</html>
