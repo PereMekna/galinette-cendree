@@ -2,7 +2,7 @@
 session_start();
 if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 	try {
-		$db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', '');
+		$db = new PDO('mysql:host=localhost;dbname=i-tech', 'root', 'root');
 	}
 	catch (Exception $e) {
 	    die('Erreur : ' . $e->getMessage());
