@@ -27,12 +27,31 @@
     exit();
   } ?>
   <div class="container">
-    <h1>Liste des tickets
-      <span class="pull-right"> 
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Liste des tickets</h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="pull-right">
+        <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
+      </div>
+      </div>
+    </div>
+    <div class="row top-buffer">
+      <div class="col-md-4 col-sm-8 col-xs-12">
+        <div class="input-group">
+          <input type="text" id="search" class="form-control" placeholder="Recherche (référence client ou n° BC)" /> 
+          <span class="input-group-btn">
+            <button id="search_btn" class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-4 col-sm-4 col-xs-12 top-buffer">
+        <div class="pull-right">
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
-            <li class="dropdown-header">Afficher les catégories</li>
+            <li class="dropdown-header">Afficher les catï¿½gories</li>
             <li><a href="#" class="small" data-value="atel" tabIndex="-1"><input type="checkbox" checked />&nbsp;Atelier</a></li>
             <li><a href="#" class="small" data-value="maint" tabIndex="-1"><input type="checkbox" checked />&nbsp;Maintenance</a></li>
             <li><a href="#" class="small" data-value="mont" tabIndex="-1"><input type="checkbox" checked />&nbsp;Montage</a></li>
@@ -46,20 +65,14 @@
             <li class="dropdown-header">Type de client</li>
             <li><a href="#" class="small" data-value="pro" tabIndex="-1"><input type="checkbox" checked />&nbsp;Professionel</a></li>
             <li><a href="#" class="small" data-value="part" tabIndex="-1"><input type="checkbox" checked />&nbsp;Particulier</a></li>
-            <li><a href="#" class="small" data-value="col" tabIndex="-1"><input type="checkbox" checked />&nbsp;Collectivité</a></li>
-            <li><a href="#" class="small" data-value="edu" tabIndex="-1"><input type="checkbox" checked />&nbsp;Éducation</a></li>
+            <li><a href="#" class="small" data-value="col" tabIndex="-1"><input type="checkbox" checked />&nbsp;Collectivitï¿½</a></li>
+            <li><a href="#" class="small" data-value="edu" tabIndex="-1"><input type="checkbox" checked />&nbsp;ï¿½ducation</a></li>
           </ul>
         </span>
-        <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
-      </span></h1>
-      <div class="col-md-4 input-group">
-        <input type="text" id="search" class="form-control" placeholder="Recherche (référence client ou n° BC)" /> 
-        <span class="input-group-btn">
-          <button id="search_btn" class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
-        </span>
       </div>
-      <br /><br />
-      <div class="table-responsive">
+    </div>
+  </div>
+      <div class="table-responsive top-buffer">
       <table class="table table-hover">
         <thead>
         <tr>

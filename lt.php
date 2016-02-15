@@ -32,8 +32,12 @@ require_once('dbConn.php');
 
 
   $reponse = $db->query($req);
-
-    while ($data = $reponse->fetch()) {
+  $rep = $reponse->fetchAll();
+  if (count($rep) == 0) {
+    echo '<tr><td>Aucun résultat</td></td>';
+  }
+  else {
+    foreach ($rep as $data) {
     $id = $data["ID"];
     $ref_client = $data["REF_CLIENT"];
     $type_client = abbrToFull($data["TYPE_CLIENT"]);
@@ -53,7 +57,7 @@ require_once('dbConn.php');
 
     echo '<tr class="clickable-row" data-href="./showTicket.php?id='.$id.'"><td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td><td>'.$n_bc.'</td>'.$tr.'&nbsp;&nbsp;</td></tr>';}
   
-
+  }
   ?>
   
   <script>
