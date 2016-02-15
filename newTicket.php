@@ -41,7 +41,7 @@
                 </span>
               </div>
             </div>
-              <div class="container col-md-6">
+              <div class="container col-md-6 top-buffer-xs top-buffer-sm">
               <div class="panel panel-default">
               <div id="description" class="panel-body">
                 <span class="glyphicon glyphicon-exclamation-sign"></span> Rentrez une référence client

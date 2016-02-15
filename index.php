@@ -42,7 +42,7 @@
         </div>
       </div>
       
-      <div class="row top-buffer">
+      <div class="row top-buffer-xs">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "pro";
