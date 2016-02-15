@@ -31,12 +31,18 @@
      ?>
 
     <div class="container">
-      <h1>Tableau de bord
-      <span class="pull-right">
-      <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
-      </span></h1>
-      
       <div class="row">
+        <div class="col-sm-8">
+          <h1>Tableau de bord</h1>
+        </div>
+        <div class="col-sm-4">
+          <div class="pull-right">
+            <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row top-buffer">
       <div class="col-xs-12 col-sm-6 col-md-6">
         <?php 
         $cat = "pro";

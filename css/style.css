@@ -75,3 +75,9 @@ body {
 table.table-show > tbody > tr > td:first-child {
 	font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    .top-buffer {
+        margin-top: 10px;
+    }
+}
