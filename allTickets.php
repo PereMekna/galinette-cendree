@@ -37,8 +37,8 @@
       </div>
       </div>
     </div>
-    <div class="row top-buffer">
-      <div class="col-md-4 col-sm-8 col-xs-12">
+    <div class="row top-buffer-xs">
+      <div class="col-md-6 col-sm-8 col-xs-12">
         <div class="input-group">
           <input type="text" id="search" class="form-control" placeholder="Recherche (référence client ou n° BC)" /> 
           <span class="input-group-btn">
@@ -46,12 +46,12 @@
           </span>
         </div>
       </div>
-      <div class="col-md-4 col-md-offset-4 col-sm-4 col-xs-12 top-buffer">
+      <div class="col-md-6 col-sm-4 col-xs-12 top-buffer-xs">
         <div class="pull-right">
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
-            <li class="dropdown-header">Afficher les catï¿½gories</li>
+            <li class="dropdown-header">Afficher les catégories</li>
             <li><a href="#" class="small" data-value="atel" tabIndex="-1"><input type="checkbox" checked />&nbsp;Atelier</a></li>
             <li><a href="#" class="small" data-value="maint" tabIndex="-1"><input type="checkbox" checked />&nbsp;Maintenance</a></li>
             <li><a href="#" class="small" data-value="mont" tabIndex="-1"><input type="checkbox" checked />&nbsp;Montage</a></li>
@@ -65,14 +65,14 @@
             <li class="dropdown-header">Type de client</li>
             <li><a href="#" class="small" data-value="pro" tabIndex="-1"><input type="checkbox" checked />&nbsp;Professionel</a></li>
             <li><a href="#" class="small" data-value="part" tabIndex="-1"><input type="checkbox" checked />&nbsp;Particulier</a></li>
-            <li><a href="#" class="small" data-value="col" tabIndex="-1"><input type="checkbox" checked />&nbsp;Collectivitï¿½</a></li>
-            <li><a href="#" class="small" data-value="edu" tabIndex="-1"><input type="checkbox" checked />&nbsp;ï¿½ducation</a></li>
+            <li><a href="#" class="small" data-value="col" tabIndex="-1"><input type="checkbox" checked />&nbsp;Collectivité</a></li>
+            <li><a href="#" class="small" data-value="edu" tabIndex="-1"><input type="checkbox" checked />&nbsp;Éducation</a></li>
           </ul>
         </span>
       </div>
     </div>
   </div>
-      <div class="table-responsive top-buffer">
+      <div class="table-responsive top-buffer-xs">
       <table class="table table-hover">
         <thead>
         <tr>
