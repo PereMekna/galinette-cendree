@@ -2,7 +2,6 @@
 include('inc/functions.php');
 
 require_once('dbConn.php');
-
   $req = 'SELECT * FROM tickets WHERE (';
   if (isset($_GET['atel'])) $req .= 'type_inter = "atel" OR ';
   if (isset($_GET['maint'])) $req .= 'type_inter = "maint" OR ';
@@ -19,13 +18,15 @@ require_once('dbConn.php');
   if (isset($_GET['edu'])) $req .= 'type_client = "edu" OR ';
 
   $req = substr($req,0,strlen($req)-4);
+
+  if (isset($_GET['search'])) $req .= ') AND (REF_CLIENT LIKE "%'.$_GET['search'].'%" OR N_BC LIKE "%'.$_GET['search'].'%"';
   $req .= ')';
   
   if (!(isset($_GET['atel']) || isset($_GET['maint']) || isset($_GET['mont']) || isset($_GET['sav']) || isset($_GET['site']) || isset($_GET['pro']) || isset($_GET['part']) || isset($_GET['col']) || isset($_GET['edu']))) {
     $req = 'SELECT * FROM tickets';
   }
 
-  echo '<tr><td>'.$req.'</td></tr>';
+  //echo '<tr><td>'.$req.'</td></tr>';
 
 
 
@@ -50,7 +51,7 @@ require_once('dbConn.php');
     else if ($priorite == 1) $tr = '<td class="warning">';
     else if ($priorite == 2) $tr = '<td class="danger">';
 
-    echo '<tr class="clickable-row" data-href="./showTicket.php?id='.$id.'"><td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td>'.$tr.'&nbsp;&nbsp;</td></tr>';}
+    echo '<tr class="clickable-row" data-href="./showTicket.php?id='.$id.'"><td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td><td>'.$n_bc.'</td>'.$tr.'&nbsp;&nbsp;</td></tr>';}
   
 
   ?>

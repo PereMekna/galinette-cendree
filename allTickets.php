@@ -28,7 +28,7 @@
   } ?>
   <div class="container">
     <h1>Liste des tickets
-      <span class="pull-right">  
+      <span class="pull-right"> 
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
@@ -52,6 +52,12 @@
         </span>
         <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
       </span></h1>
+      <div class="col-md-4 input-group">
+        <input type="text" id="search" class="form-control" placeholder="Recherche (référence client ou n° BC)" /> 
+        <span class="input-group-btn">
+          <button id="search_btn" class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
+        </span>
+      </div>
       <br /><br />
       <div class="table-responsive">
       <table class="table table-hover">
@@ -61,6 +67,7 @@
           <th>Date de livraison</th>
           <th>Description</th>
           <th>Avancement</th>
+          <th>N° BC</th>
           <th><span class="glyphicon glyphicon-bell"></span></th>
         </tr>
       </thead>
@@ -122,6 +129,30 @@
                 window.document.location = $(this).data("href");
 
             });
+        });
+
+        $('#search').change(function() {
+          var url = 'lt.php?';
+          $.each( options, function( index, value ) {
+            switch (value) {
+               case 'atel': url+='atel=1&'; break;
+               case 'maint': url+='maint=1&'; break;
+               case 'mont': url+='mont=1&'; break;
+               case 'sav': url+='sav=1&'; break;
+               case 'site': url+='site=1&'; break;
+               case 'pro': url+='pro=1&'; break;
+               case 'part': url+='part=1&'; break;
+               case 'col': url+='col=1&'; break;
+               case 'edu': url+='edu=1&'; break;
+            }
+          });
+           url = url.substring(0,url.length-1);
+           console.log( options);
+           if ($('#search').val() != '') {
+            url += '&search='+$('#search').val();
+           }
+             
+          $('#jtable').load(url);
         });
 
 
