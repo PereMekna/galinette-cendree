@@ -65,6 +65,7 @@
             <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-log-in"></span> Se connecter</button>
           </div>
         </div>
+        <a class="col-md-offset-2" href="register.php">Créer un compte</a>
         <p class="col-md-offset-2"><?php echo $err ?></p>
       </form>
   </body>
