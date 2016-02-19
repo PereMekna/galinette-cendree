@@ -67,7 +67,16 @@
   
     ?>
   <div class="container">
-      <h1>Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="pull-right">
+        <a class="btn btn-danger" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-remove"></span> Supprimer ticket</a>
+      </div>
+      </div>
+    </div>
         <br /><br />
         <div class="row">
           <div class="col-md-4">
@@ -181,6 +190,28 @@
           </div>
         </div>
   </div>
+  <!-- Modal -->
+  <div id="modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Suppression du ticket <?php echo $id ?> pour <?php echo $ref_client ?></h4>
+        </div>
+        <div class="modal-body">
+          <p>Êtes vous sur de vouloir supprimer ce ticket ?</p>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-danger" href="deleteTicket.php?id=<?php echo $id ?>">Supprimer</a>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="jquery-ui.js"></script>
