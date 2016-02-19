@@ -43,6 +43,19 @@
             <textarea id="desc" class="form-control" rows="5" required title="Modification " name="modif" autofocus><?php echo $resultat["TEXTE"]; ?></textarea>
           </div>
         </div>
+        <div class="form-group">
+          <label for="avancement" class="control-label col-md-2">Avancement :</label>
+          <div class="col-md-4">
+            <select id="avancement" name="avancement" class="form-control">
+              <option value="af"><?php echo abbrToFull('af') ?></option>
+              <option value="ec"><?php echo abbrToFull('ec') ?></option>
+              <option value="arc"><?php echo abbrToFull('arc') ?></option>
+              <option value="ap"><?php echo abbrToFull('ap') ?></option>
+              <option value="te"><?php echo abbrToFull('te') ?></option>
+              <option value="tl"><?php echo abbrToFull('tl') ?></option>
+            </select>
+          </div>
+        </div>
         <input type="hidden" name="modif_hidden" value="<?php echo $id; ?>" />
         <input type="hidden" name="ticket_hidden" value="<?php echo $resultat['N_TICKET']; ?>" />
         <div class="form-group"> 
