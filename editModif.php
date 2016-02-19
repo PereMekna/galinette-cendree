@@ -47,12 +47,12 @@
           <label for="avancement" class="control-label col-md-2">Avancement :</label>
           <div class="col-md-4">
             <select id="avancement" name="avancement" class="form-control">
-              <option value="af"><?php echo abbrToFull('af') ?></option>
-              <option value="ec"><?php echo abbrToFull('ec') ?></option>
-              <option value="arc"><?php echo abbrToFull('arc') ?></option>
-              <option value="ap"><?php echo abbrToFull('ap') ?></option>
-              <option value="te"><?php echo abbrToFull('te') ?></option>
-              <option value="tl"><?php echo abbrToFull('tl') ?></option>
+              <option value="af" <?php if ($resultat['AVANCEMENT'] == 'af') echo 'selected'; ?>><?php echo abbrToFull('af') ?></option>
+              <option value="ec" <?php if ($resultat['AVANCEMENT'] == 'ec') echo 'selected'; ?>><?php echo abbrToFull('ec') ?></option>
+              <option value="arc" <?php if ($resultat['AVANCEMENT'] == 'arc') echo 'selected'; ?>><?php echo abbrToFull('arc') ?></option>
+              <option value="ap" <?php if ($resultat['AVANCEMENT'] == 'ap') echo 'selected'; ?>><?php echo abbrToFull('ap') ?></option>
+              <option value="te" <?php if ($resultat['AVANCEMENT'] == 'te') echo 'selected'; ?>><?php echo abbrToFull('te') ?></option>
+              <option value="tl" <?php if ($resultat['AVANCEMENT'] == 'tl') echo 'selected'; ?>><?php echo abbrToFull('tl') ?></option>
             </select>
           </div>
         </div>

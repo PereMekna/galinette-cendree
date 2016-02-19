@@ -9,6 +9,11 @@ if (isset($_POST["modif_hidden"]) && isset($_POST["modif"])) {
 					'avancement' => $_POST["avancement"],
 					'id' => $_POST["modif_hidden"]
 					));
+	$req = $db->prepare('UPDATE tickets SET AVANCEMENT = :avancement WHERE ID = :id');
+	$req->execute(array(
+					'avancement' => $_POST["avancement"],
+					'id' => $_POST["ticket_hidden"]
+					));
 	header('Location: ./showTicket.php?id='.$_POST["ticket_hidden"]);
 	exit();
 }
