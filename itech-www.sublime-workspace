@@ -1,0 +1,291 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fu",
+				"function"
+			],
+			[
+				"typ",
+				"type_inter"
+			],
+			[
+				"th",
+				"th	Tag"
+			],
+			[
+				"type",
+				"type_client"
+			],
+			[
+				"date",
+				"datelivraison"
+			],
+			[
+				"alert",
+				"alert-danger"
+			],
+			[
+				"sa",
+				"sav_marque"
+			],
+			[
+				"retsav",
+				"retsav1"
+			],
+			[
+				"check",
+				"checked"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"mail",
+				"mail"
+			],
+			[
+				"password",
+				"password_conf"
+			],
+			[
+				"date_",
+				"date_livraison"
+			],
+			[
+				"reponse",
+				"reponsedesc"
+			],
+			[
+				"repon",
+				"reponsedesc"
+			],
+			[
+				"ty",
+				"type_inter"
+			],
+			[
+				"da",
+				"date_livraison"
+			],
+			[
+				"init",
+				"intitule"
+			],
+			[
+				"pri",
+				"priorite"
+			],
+			[
+				"preg",
+				"preg_match"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"Da",
+				"Date"
+			],
+			[
+				"Coef",
+				"Coefficient"
+			],
+			[
+				"Nom",
+				"NomMatiere"
+			],
+			[
+				"Dat",
+				"DateNaissance"
+			],
+			[
+				"in",
+				"input	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/i-tech/dbConn.php",
+		"/C/xampp/htdocs/i-tech/inc/functions.php",
+		"/C/xampp/htdocs/i-tech/navbar.php",
+		"/C/xampp/htdocs/i-tech/logout.php",
+		"/C/xampp/htdocs/i-tech/getAlert.php",
+		"/C/xampp/htdocs/i-tech/css/style.css",
+		"/C/xampp/htdocs/i-tech/editModif.php",
+		"/C/xampp/htdocs/i-tech/editModifDB.php",
+		"/C/xampp/htdocs/i-tech/addModif.php",
+		"/C/xampp/htdocs/i-tech/login.php",
+		"/C/xampp/htdocs/i-tech/register.php",
+		"/C/xampp/htdocs/i-tech/showTicket.php",
+		"/C/xampp/htdocs/i-tech/liste.php",
+		"/C/xampp/htdocs/i-tech/addTicket.php",
+		"/C/xampp/htdocs/i-tech/getCustomer.php",
+		"/C/xampp/htdocs/i-tech/newTicket.php",
+		"/C/xampp/htdocs/i-tech/lt.php",
+		"/C/xampp/htdocs/i-tech/index.php",
+		"/C/xampp/htdocs/i-tech/allTickets.php",
+		"/C/xampp/htdocs/i-tech/admin/index.php",
+		"/C/xampp/htdocs/i-tech/testastuce.php",
+		"/C/xampp/htdocs/i-tech/getTickets.php",
+		"/C/xampp/htdocs/i-tech/getTickets",
+		"/C/xampp/htdocs/test_mazeberry/matiere.php",
+		"/C/Users/Loulou/Downloads/CEF Formation Cuisine.html",
+		"/C/xampp/htdocs/test_mazeberry/index.php",
+		"/C/Users/Loulou/Desktop/I-TECH/framework/jquery-ui-1.11.4.custom/index.html",
+		"/C/Users/Loulou/Desktop/I-TECH/export bdd/Sacramentorealestatetransactions.csv",
+		"/C/Users/Loulou/Desktop/I-TECH/export bdd/test2.txt",
+		"/C/Users/Loulou/Desktop/I-TECH/export bdd/export-bdd-client.csv",
+		"/C/xampp/htdocs/i-tech/css/bootstrap.css",
+		"/C/xampp/htdocs/i-tech/header.php",
+		"/C/xampp/htdocs/projet_titan_bs/header.php",
+		"/C/xampp/htdocs/projet_titan/index.php",
+		"/C/xampp/htdocs/projet_titan_bs/footer.php",
+		"/C/xampp/htdocs/projet_titan_bs/index.php",
+		"/C/xampp/htdocs/projet_titan/contact.php",
+		"/C/xampp/htdocs/projet_titan/style_screen.css",
+		"/C/xampp/htdocs/projet_titan/Inclusions/debut.inc.php",
+		"/C/xampp/htdocs/php training/index.php",
+		"/C/Users/Loulou/Desktop/EPSI COURS/PL SQL/tp1.sql",
+		"/C/xampp/htdocs/test_mazeberry/eleve.php",
+		"/C/xampp/htdocs/test_mazeberry/note.php",
+		"/C/xampp/phpMyAdmin/user_password.php",
+		"/C/Users/Loulou/Desktop/EPSI COURS/PL SQL/tp1 - 2.sql",
+		"/C/Users/Loulou/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"8",
+			"hidden",
+			"type_client\n",
+			"$type_client\n",
+			"client\n",
+			">\n",
+			"autocompl",
+			"if (!empty($_POST[\"Nom\"])) {"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$str"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

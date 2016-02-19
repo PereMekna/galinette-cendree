@@ -128,10 +128,8 @@
                 case 'edu': url+='edu=1&'; break;
              }
            });
-            url = url.substring(0,url.length-1);
-            console.log( options);
-              
-           $('#jtable').load(url);
+            url = url.substring(0,url.length-1);              
+           $('#jtable').load(url);           
            return false;
 
         });

@@ -72,31 +72,6 @@
         <div class="row">
           <div class="col-md-4">
             <div class="panel panel-default">
-            <?php /*<!--<dl class="dl-horizontal">
-              <dt>Client :</dt>
-              <dd><a href="#" title="<?php echo $intitule ?>" data-toggle="popover" data-placement="auto" data-trigger="focus" data-content="<?php echo 'Réf : '.$ref_client.' / Mail : '.$mail.' / Tél : '.$tel ?>"><?php echo $ref_client ?></a></dd>
-              <dt>N° BC :</dt>
-              <dd><?php echo $n_bc ?></dd>
-              <dt>Type de client :</dt>
-              <dd><?php echo abbrToFull($type_client) ?></dd>
-              <dt>Type d'intervention :</dt>
-              <dd><?php echo abbrToFull($type_inter) ?></dd>
-              <dt>Date de livraison :</dt>
-              <dd><?php echo date("D d/m/Y ", strtotime($date_livraison)) ?></dd>
-              <dt>Facturation :</dt>
-              <dd><?php if ($facturation) echo 'A facturer';
-              else echo 'Sous maintenance / garantie'; ?></dd>
-              <dt>Priorité :</dt>
-              <dd><?php echo abbrToFull($priorite) ?></dd>
-              <?php if ($type_inter == "sav") { ?>
-              <dt>Marque :</dt>
-              <dd><?php echo $sav_marque ?></dd>
-              <dt>Modèle :</dt>
-              <dd><?php echo $sav_modele ?></dd>
-              <dt>N° série :</dt>
-              <dd><?php echo $sav_n_serie ?></dd>
-              <?php } ?>
-            </dl>-->*/?>
             <table class="table table-show">
               <tr>
                 <td>Client</td>

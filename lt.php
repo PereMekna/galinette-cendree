@@ -34,7 +34,7 @@ require_once('dbConn.php');
   $reponse = $db->query($req);
   $rep = $reponse->fetchAll();
   if (count($rep) == 0) {
-    echo '<tr><td>Aucun résultat</td></td>';
+    echo '<tr><td><span class="glyphicon glyphicon-warning-sign"></span> Aucun résultat</td></td>';
   }
   else {
     foreach ($rep as $data) {
