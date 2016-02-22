@@ -30,7 +30,7 @@
   $id = $_GET['id'];
   $reponse = $db->query('SELECT * FROM tickets where ID='.$id);
   $reponsedesc = $db->query('SELECT * FROM descriptions where N_TICKET='.$id);
-  $requete = $db->prepare("SELECT * FROM CLIENTS WHERE NUMERO = ?");
+  $requete = $db->prepare("SELECT * FROM clients WHERE NUMERO = ?");
   while ($data = $reponse->fetch()) {
     $ref_client = $data["REF_CLIENT"];
     $type_client = $data["TYPE_CLIENT"];
