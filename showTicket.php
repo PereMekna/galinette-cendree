@@ -73,7 +73,8 @@
       </div>
       <div class="col-sm-4">
         <div class="pull-right">
-        <a class="btn btn-danger" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-remove"></span> Supprimer ticket</a>
+        <a class="btn btn-default" href="editTicket.php?id=<?php echo $id ?>"><span class="glyphicon glyphicon-edit"></span> Éditer</a>
+        <a class="btn btn-danger" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-remove"></span> Supprimer</a>
       </div>
       </div>
     </div>
@@ -126,7 +127,7 @@
               </tr>
             </table>
             <div class="panel-footer">
-                Détails ticket
+                <a href="editTicket.php?id=<?php echo $id ?>">Éditer le ticket</a>
             </div>
           </div>
 
