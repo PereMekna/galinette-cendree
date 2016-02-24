@@ -40,7 +40,7 @@
     <div class="row top-buffer-xs">
       <div class="col-md-6 col-sm-8 col-xs-12">
         <div class="input-group">
-          <input type="text" id="search" class="form-control" placeholder="Recherche (référence client ou n° BC)" /> 
+          <input type="text" id="search" class="form-control" placeholder="Recherche (référence client, n° BC ou description)" /> 
           <span class="input-group-btn">
             <button id="search_btn" class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search"></span>&nbsp;</button>
           </span>

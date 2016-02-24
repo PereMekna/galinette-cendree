@@ -26,11 +26,20 @@ require_once('dbConn.php');
     $req = 'SELECT * FROM tickets';
   }
 
+  
+  if (isset($_GET['search'])) {
+      $rep_search = $db->prepare('SELECT * FROM descriptions WHERE TEXTE LIKE :searchterm');
+      $rep_search->execute(array(
+                  'searchterm' => '%'.$_GET['search'].'%'));
+    $result_search = $rep_search->fetchAll();
+    if (!empty($result_search)) {
+      foreach ($result_search as $desc) {
+        $req .= ' OR ID = '.$desc['N_TICKET'];
+      }
+    }
+  }
+
   //echo '<tr><td>'.$req.'</td></tr>';
-
-
-
-
   $reponse = $db->query($req);
   $rep = $reponse->fetchAll();
   if (count($rep) == 0) {
