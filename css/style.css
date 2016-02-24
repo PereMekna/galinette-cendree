@@ -87,3 +87,7 @@ table.table-show > tbody > tr > td:first-child {
         margin-top: 10px;
     }
 }
+
+.clickable-row {
+    cursor: pointer;
+}
