@@ -49,6 +49,18 @@
       <div class="col-md-6 col-sm-4 col-xs-12 top-buffer-xs">
         <div class="pull-right">
         <span class="dropdown">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span>&nbsp;<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Afficher les catégories</li>
+            <li><a href="#" class="small" data-value="af" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('af') ?></a></li>
+            <li><a href="#" class="small" data-value="ec" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('ec') ?></a></li>
+            <li><a href="#" class="small" data-value="arc" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('arc') ?></a></li>
+            <li><a href="#" class="small" data-value="ap" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('ap') ?></a></li>
+            <li><a href="#" class="small" data-value="te" tabIndex="-1"><input type="checkbox" />&nbsp;<?php echo abbrToFull('te') ?></a></li>
+            <li><a href="#" class="small" data-value="tl" tabIndex="-1"><input type="checkbox" />&nbsp;<?php echo abbrToFull('tl') ?></a></li>
+          </ul>
+        </span>
+        <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Afficher les catégories</li>
@@ -95,7 +107,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script>
-        var options = ["maint", "atel", "mont", "sav", "site", "pro", "part", "col", "edu"];
+        var options = ["maint", "atel", "mont", "sav", "site", "pro", "part", "col", "edu", "af", "ec", "arc", "ap"];
 
 
         $( '.dropdown-menu a' ).on( 'click', function( event ) {
@@ -126,6 +138,12 @@
                 case 'part': url+='part=1&'; break;
                 case 'col': url+='col=1&'; break;
                 case 'edu': url+='edu=1&'; break;
+                case 'af': url+='af=1&'; break;
+                case 'ec': url+='ec=1&'; break;
+                case 'arc': url+='arc=1&'; break;
+                case 'ap': url+='ap=1&'; break;
+                case 'te': url+='te=1&'; break;
+                case 'tl': url+='tl=1&'; break;
              }
            });
             url = url.substring(0,url.length-1);              
@@ -155,6 +173,12 @@
                case 'part': url+='part=1&'; break;
                case 'col': url+='col=1&'; break;
                case 'edu': url+='edu=1&'; break;
+               case 'af': url+='af=1&'; break;
+               case 'ec': url+='ec=1&'; break;
+               case 'arc': url+='arc=1&'; break;
+               case 'ap': url+='ap=1&'; break;
+               case 'te': url+='te=1&'; break;
+               case 'tl': url+='tl=1&'; break;
             }
           });
            url = url.substring(0,url.length-1);
