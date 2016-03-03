@@ -17,13 +17,25 @@ require_once('dbConn.php');
   if (isset($_GET['col'])) $req .= 'type_client = "col" OR ';
   if (isset($_GET['edu'])) $req .= 'type_client = "edu" OR ';
 
+  if ((isset($_GET['atel']) || isset($_GET['maint']) || isset($_GET['mont']) || isset($_GET['sav']) || isset($_GET['site']) || isset($_GET['pro']) || isset($_GET['part']) || isset($_GET['col']) || isset($_GET['edu'])) && (isset($_GET['af']) || isset($_GET['ec']) || isset($_GET['arc']) || isset($_GET['ap']) || isset($_GET['te']) || isset($_GET['tl']))) {
+    $req = substr($req,0,strlen($req)-4);
+    $req .= ') AND (';
+  }
+  if (isset($_GET['af'])) $req .= 'AVANCEMENT = "af" OR ';
+  if (isset($_GET['ec'])) $req .= 'AVANCEMENT = "ec" OR ';
+  if (isset($_GET['arc'])) $req .= 'AVANCEMENT = "arc" OR ';
+  if (isset($_GET['ap'])) $req .= 'AVANCEMENT = "ap" OR ';
+  if (isset($_GET['te'])) $req .= 'AVANCEMENT = "te" OR ';
+  if (isset($_GET['tl'])) $req .= 'AVANCEMENT = "tl" OR ';
+
+
   $req = substr($req,0,strlen($req)-4);
 
   if (isset($_GET['search'])) $req .= ') AND (REF_CLIENT LIKE "%'.$_GET['search'].'%" OR N_BC LIKE "%'.$_GET['search'].'%"';
   $req .= ')';
   
-  if (!(isset($_GET['atel']) || isset($_GET['maint']) || isset($_GET['mont']) || isset($_GET['sav']) || isset($_GET['site']) || isset($_GET['pro']) || isset($_GET['part']) || isset($_GET['col']) || isset($_GET['edu']))) {
-    $req = 'SELECT * FROM tickets';
+  if (!(isset($_GET['atel']) || isset($_GET['maint']) || isset($_GET['mont']) || isset($_GET['sav']) || isset($_GET['site']) || isset($_GET['pro']) || isset($_GET['part']) || isset($_GET['col']) || isset($_GET['edu']) || isset($_GET['af']) || isset($_GET['ec']) || isset($_GET['arc']) || isset($_GET['ap']) || isset($_GET['te']) || isset($_GET['tl']))) {
+    $req = 'SELECT * FROM tickets WHERE (AVANCEMENT = "af" OR AVANCEMENT = "ec" OR AVANCEMENT = "arc" OR AVANCEMENT = "ap")';
   }
 
   
@@ -39,7 +51,7 @@ require_once('dbConn.php');
     }
   }
 
-  //echo '<tr><td>'.$req.'</td></tr>';
+  echo '<tr><td>'.$req.'</td></tr>';
   $reponse = $db->query($req);
   $rep = $reponse->fetchAll();
   if (count($rep) == 0) {
