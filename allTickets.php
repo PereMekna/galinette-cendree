@@ -49,7 +49,7 @@
       <div class="col-md-6 col-sm-4 col-xs-12 top-buffer-xs">
         <div class="pull-right">
         <span class="dropdown">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-bell"></span>&nbsp;<span class="caret"></span></button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-glass"></span>&nbsp;<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Afficher les catégories</li>
             <li><a href="#" class="small" data-value="af" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('af') ?></a></li>
