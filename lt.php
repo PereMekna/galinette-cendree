@@ -51,7 +51,7 @@ require_once('dbConn.php');
     }
   }
 
-  echo '<tr><td>'.$req.'</td></tr>';
+  //echo '<tr><td>'.$req.'</td></tr>';
   $reponse = $db->query($req);
   $rep = $reponse->fetchAll();
   if (count($rep) == 0) {
