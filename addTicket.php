@@ -45,7 +45,11 @@ if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 						'modele' => $_POST['modele'],
 						'n_serie' => $_POST['noserie']));
 	}
-
+	if(count($_FILES['files']['name']) > 0) {
+		for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
+			print_r($file);
+		}
+	}
 	header('Location: ./showTicket.php?id='.$lastID);
 	exit();
 }
