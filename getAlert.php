@@ -12,7 +12,7 @@
         <div class="panel-heading">'.abbrToFull($cat).' <span class="badge">'.$nbrow.'</span></div>
         <div class="panel-body">';
     if ($nbrow == 0) {
-        echo '<p>Pas de ticket ouvert dans cette catégorie.</p>';
+        echo '<p>Pas de tickets ouverts dans cette catégorie.</p>';
     }
     while ($data = $requete->fetch()) {
     	if ($data["PRIORITE"] == 0) $class = "alert alert-success";
