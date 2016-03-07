@@ -3,7 +3,7 @@
 
     $count = 0;
 
-    $requete = $db->prepare("SELECT * FROM TICKETS WHERE TYPE_CLIENT = :type_client ORDER BY PRIORITE DESC");
+    $requete = $db->prepare("SELECT * FROM TICKETS WHERE TYPE_CLIENT = :type_client AND (AVANCEMENT = 'af' OR AVANCEMENT = 'ec' OR AVANCEMENT = 'arc' OR AVANCEMENT = 'ap') ORDER BY PRIORITE DESC");
     $requete->bindValue(':type_client', $cat);
     $requete->execute();
     $nbrow = $requete->rowCount();
@@ -11,7 +11,9 @@
     echo '<div class="panel panel-default">
         <div class="panel-heading">'.abbrToFull($cat).' <span class="badge">'.$nbrow.'</span></div>
         <div class="panel-body">';
-
+    if ($nbrow == 0) {
+        echo '<p>Pas de ticket ouvert dans cette catégorie.</p>';
+    }
     while ($data = $requete->fetch()) {
     	if ($data["PRIORITE"] == 0) $class = "alert alert-success";
     	else if ($data["PRIORITE"] == 1) $class = "alert alert-warning";
