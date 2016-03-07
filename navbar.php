@@ -1,3 +1,6 @@
+<?php 
+require_once('dbConn.php'); 
+?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -26,5 +29,4 @@
 
 <?php include('inc/functions.php'); 
 ini_set('display_errors',1);
-error_reporting(-1);
-require_once('dbConn.php'); ?>
+error_reporting(-1); ?>

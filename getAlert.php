@@ -7,6 +7,7 @@
     $requete->bindValue(':type_client', $cat);
     $requete->execute();
     $nbrow = $requete->rowCount();
+    $today = new DateTime();
 
     echo '<div class="panel panel-default">
         <div class="panel-heading">'.abbrToFull($cat).' <span class="badge">'.$nbrow.'</span></div>
@@ -20,10 +21,13 @@
     	else $class = "alert alert-danger";
 
     	$datelivraison = new DateTime($data["DATE_LIVRAISON"]);
-    	$days = $datelivraison->diff(new DateTime())->format('%d jour(s)');
+        if ($datelivraison > $today) {
+            $days = $datelivraison->diff($today)->format('%d jour(s) restant(s)');
+        }
+    	else $days = $datelivraison->diff($today)->format('Dépassé de %r%a jour(s)');
 
     	echo '<a class="alert-link" href="showTicket.php?id='.$data['ID'].'" ><div class="'.$class.'">
-          <strong>'.abbrToFull($data["AVANCEMENT"]).' : '.abbrToFull($data["TYPE_INTER"]).' pour '.$data["REF_CLIENT"].'.</strong> '.$days.' restant(s).</div></a>';
+          <strong>'.abbrToFull($data["AVANCEMENT"]).' : '.abbrToFull($data["TYPE_INTER"]).' pour '.$data["REF_CLIENT"].'.</strong> '.$days.'.</div></a>';
         if(++$count >= $max_row) break;
     }
 
