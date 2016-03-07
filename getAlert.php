@@ -2,16 +2,19 @@
     require_once('dbConn.php');
 
     $count = 0;
-    $req = "SELECT * FROM tickets WHERE TYPE_CLIENT = ? ORDER BY PRIORITE DESC";
-    $requete = $db->prepare($req);
-    $requete->execute(array($cat));
-    $nbrow = $db->query("SELECT FOUND_ROWS()")->fetchColumn();
+
+    $requete = $db->prepare("SELECT * FROM TICKETS WHERE TYPE_CLIENT = :type_client AND (AVANCEMENT = 'af' OR AVANCEMENT = 'ec' OR AVANCEMENT = 'arc' OR AVANCEMENT = 'ap') ORDER BY PRIORITE DESC");
+    $requete->bindValue(':type_client', $cat);
+    $requete->execute();
+    $nbrow = $requete->rowCount();
 
     echo '<div class="panel panel-default">
         <div class="panel-heading">'.abbrToFull($cat).' <span class="badge">'.$nbrow.'</span></div>
         <div class="panel-body">';
-
-    while ($data = $requete->fetch(PDO::FETCH_ASSOC)) {
+    if ($nbrow == 0) {
+        echo '<p>Pas de tickets ouverts dans cette catégorie.</p>';
+    }
+    while ($data = $requete->fetch()) {
     	if ($data["PRIORITE"] == 0) $class = "alert alert-success";
     	else if ($data["PRIORITE"] == 1) $class = "alert alert-warning";
     	else $class = "alert alert-danger";
