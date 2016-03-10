@@ -150,6 +150,7 @@
   var i = 1;
   $(document).ready(function () {
     $('#jtable').load('smartLT.php');
+    $('#cnt_ns').val(1);
   });
   $( "#sn_auto" ).autocomplete({
       source: 'sn.php',
