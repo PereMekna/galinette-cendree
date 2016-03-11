@@ -23,8 +23,8 @@ else {
 $rep = $requete->fetchAll();
 if (count($rep) == 0) {
   echo '<tr><td><span class="glyphicon glyphicon-warning-sign"></span> Aucun résultat.</td></tr>';
-  $destinataire = 'dupont.louis4@gmail.com';
-  $expediteur = 'internet@internet.com';
+  $destinataire = 'jerome.dupire@itech-informatique.com';
+  $expediteur = 'smart-activation@itech-informatique.com';
   $objet = "[".$ville."] Demande d'activation";
   $message = "Bonjour,<br />Je souhaiterai activer du matériel pour mon client.<br />Revendeur :<br />I-Tech informatique<br />Jerome Dupire<br />Adresse : 176 route de Lens, 62223 STE CATHERINE<br />0321601212<br />Jerome.dupire@itech-informatique.com<br />sebastien@itech-informatique.com<br />chouayb@itech-informatique.com<br /><br />".$ville." – ".$etab.".<br />".$modele."<br />".$sn."<br />Nom : ".$ville." – ".$etab."<br />Cordialement,<br />Jérôme Dupire<br /><br />I-Tech Informatique & Technologies<br />Tel : 03 21 60 12 12<br />176 route de Lens<br />62223 Ste Catherine";
   $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
