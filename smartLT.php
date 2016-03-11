@@ -21,8 +21,30 @@ else {
 	$requete->execute();
 }
 $rep = $requete->fetchAll();
-foreach ($rep as $data) {
+if (count($rep) == 0) {
+  echo '<tr><td><span class="glyphicon glyphicon-warning-sign"></span> Aucun résultat.</td></tr>';
+  $destinataire = 'dupont.louis4@gmail.com';
+  $expediteur = 'internet@internet.com';
+  $objet = "[".$ville."] Demande d'activation";
+  $message = "Bonjour,<br />Je souhaiterai activer du matériel pour mon client.<br />Revendeur :<br />I-Tech informatique<br />Jerome Dupire<br />Adresse : 176 route de Lens, 62223 STE CATHERINE<br />0321601212<br />Jerome.dupire@itech-informatique.com<br />sebastien@itech-informatique.com<br />chouayb@itech-informatique.com<br /><br />".$ville." – ".$etab.".<br />".$modele."<br />".$sn."<br />Nom : ".$ville." – ".$etab."<br />Cordialement,<br />Jérôme Dupire<br /><br />I-Tech Informatique & Technologies<br />Tel : 03 21 60 12 12<br />176 route de Lens<br />62223 Ste Catherine";
+  $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
+  $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
+  $headers .= 'From: "INTERNET"<'.$expediteur.'>'."\n"; // Expediteur
+  $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
+  if (mail($destinataire, $objet, $message, $headers)) // Envoi du message
+  {
+      echo '<tr><td>Votre message a bien été envoyé </td></tr>';
+  }
+  else // Non envoyé
+  {
+      echo "<tr><td>Votre message n'a pas pu être envoyé</td></tr>";
+  }
+
+}
+else {
+	foreach ($rep as $data) {
 	echo '<tr><td>'.$data["VILLE"].'</td><td>'.$data["ETAB"].'</td><td>'.$data["MODELE"].'</td><td>'.$data["S_N"].'</td><td>'.$data["CLEF"].'</td><td>'.$data["DATE"].'</td><td>'.$data["VERSION"].'</td><td><a href="smartEdit.php?id='.$data["S_N"].'"><span class="glyphicon glyphicon-edit"></span></a></td></tr>';
+	}
 }
 
 ?>
