@@ -28,6 +28,7 @@ if (count($rep) == 0) {
   $objet = "[".$ville."] Demande d'activation";
   $message = "Bonjour,<br />Je souhaiterai activer du matériel pour mon client.<br />Revendeur :<br />I-Tech informatique<br />Jerome Dupire<br />Adresse : 176 route de Lens, 62223 STE CATHERINE<br />0321601212<br />Jerome.dupire@itech-informatique.com<br />sebastien@itech-informatique.com<br />chouayb@itech-informatique.com<br /><br />".$ville." – ".$etab.".<br />".$modele."<br />".$sn."<br />Nom : ".$ville." – ".$etab."<br />Cordialement,<br />Jérôme Dupire<br /><br />I-Tech Informatique & Technologies<br />Tel : 03 21 60 12 12<br />176 route de Lens<br />62223 Ste Catherine";
   $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
+  $headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n";
   $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
   $headers .= 'From: "INTERNET"<'.$expediteur.'>'."\n"; // Expediteur
   $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
