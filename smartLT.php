@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once('dbConn.php');
 
 if (isset($_GET["ville"])) $ville = $_GET["ville"];
@@ -32,14 +32,11 @@ if (count($rep) == 0) {
   $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
   $headers .= 'From: "INTERNET"<'.$expediteur.'>'."\n"; // Expediteur
   $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
-  if (mail($destinataire, $objet, $message, $headers)) // Envoi du message
-  {
-      echo '<tr><td>Votre message a bien été envoyé </td></tr>';
-  }
-  else // Non envoyé
-  {
-      echo "<tr><td>Votre message n'a pas pu être envoyé</td></tr>";
-  }
+  $_SESSION['destinataire'] = $destinataire;
+  $_SESSION['objet'] = $objet;
+  $_SESSION['message'] = $message;
+  $_SESSION['headers'] = $headers;
+  echo '<tr><td><span class="glyphicon glyphicon-envelope"></span> <a href="smartMailSend.php">Envoyer le mail à '.$destinataire.'</a></td></tr>';
 
 }
 else {
