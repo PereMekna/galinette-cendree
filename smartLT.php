@@ -30,7 +30,7 @@ if (count($rep) == 0) {
   $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
   $headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n";
   $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
-  $headers .= 'From: "INTERNET"<'.$expediteur.'>'."\n"; // Expediteur
+  $headers .= 'From: "ITECH ACTIVATION SMART"<'.$expediteur.'>'."\n"; // Expediteur
   $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
   $_SESSION['destinataire'] = $destinataire;
   $_SESSION['objet'] = $objet;
