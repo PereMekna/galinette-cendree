@@ -36,6 +36,11 @@ require_once('dbConn.php'); ?>
         <a href="#" id="btn" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
       </div>
     </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div id="info-fournisseur"><p>Édité par : <?php echo $reponse['USER']; ?>, <?php echo $reponse['DATE_MODIF']; ?></p></div>
+      </div>
+    </div>
     
   </div>
   <script>
