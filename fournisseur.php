@@ -32,7 +32,7 @@ require_once('dbConn.php'); ?>
           <textarea id="editortext"><?php echo $reponse['CONTENT']; ?></textarea>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-2 top-buffer-sm">
         <a href="#" id="btn" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span></a>
       </div>
     </div>
