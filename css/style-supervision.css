@@ -1,8 +1,10 @@
 body {
 	background-image: url("../img/bg.jpg");
+	margin-top: 50px;
 }
 
 #global {
 	background-color: rgba(255,255,255,0.7);
 	padding: 50px;
+	margin-bottom: 50px;
 }
