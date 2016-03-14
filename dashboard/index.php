@@ -32,37 +32,39 @@ require_once('../inc/functions.php');
   $max_row = 5;
   ?>
   <div class="container">
-  	<div class="row">
-  		<h1>Supervision atelier</h1>
-  	</div>
-  	<div class="row">
-  		<div class="col-lg-6">
-  			<h2>Professionnel</h2>
-  			<?php
-  			$cat = "pro";
-  			include 'getAlert.php'; ?>
-  		</div>
-  		<div class="col-lg-6">
-  			<h2>Collectivité</h2>
-  			<?php 
-        	$cat = "col";
-        	include 'getAlert.php'; ?>
-  		</div>
-  	</div>
-  	<div class="row">
-  		<div class="col-lg-6">
-  			<h2>Particulier</h2>
-  			<?php 
-  			$cat = "part";
-  			include 'getAlert.php'; ?>
-  		</div>
-  		<div class="col-lg-6">
-  			<h2>Éducation</h2>
-  			<?php 
-  			$cat = "edu";
-  			include 'getAlert.php'; ?>
-  		</div>
-  	</div>
+  	<div id="global">
+	  	<div class="row">
+	  		<h1>Supervision atelier</h1>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col-lg-6">
+	  			<h2>Professionnel</h2>
+	  			<?php
+	  			$cat = "pro";
+	  			include 'getAlert.php'; ?>
+	  		</div>
+	  		<div class="col-lg-6">
+	  			<h2>Collectivité</h2>
+	  			<?php 
+	        	$cat = "col";
+	        	include 'getAlert.php'; ?>
+	  		</div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="col-lg-6">
+	  			<h2>Particulier</h2>
+	  			<?php 
+	  			$cat = "part";
+	  			include 'getAlert.php'; ?>
+	  		</div>
+	  		<div class="col-lg-6">
+	  			<h2>Éducation</h2>
+	  			<?php 
+	  			$cat = "edu";
+	  			include 'getAlert.php'; ?>
+	  		</div>
+	  	</div>
+	  </div>
   </div>
 </body>
 </html>
