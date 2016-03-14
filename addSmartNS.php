@@ -13,12 +13,13 @@ if (isset($_POST["ville"]) && isset($_POST["etab"]) && isset($_POST["modele"]) &
 					'version' => $_POST["version"]
 					));
 	$nb = $_POST["cnt_ns"];
+	$lastID = $db->lastInsertId();
 
 	$req = $db->prepare('INSERT INTO smart_sn(S_N, CLEF) VALUES(:s_n, :clef)');
 	for ($i = 1; $i <= $nb ; $i++) {
 		$req->execute(array(
 						's_n' => $_POST["sn".$i],
-						'clef' => $_POST["clef"]
+						'clef' => $lastID
 						));
 	}
 	

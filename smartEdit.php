@@ -31,7 +31,7 @@ require_once('dbConn.php'); ?>
     $id = $_GET["id"];
     require_once('dbConn.php');
     if (isset($_GET["id"])) {
-      $req = $db->prepare('SELECT * FROM smart_license INNER JOIN smart_sn ON smart_license.CLEF = smart_sn.CLEF AND smart_sn.S_N = :id');
+      $req = $db->prepare('SELECT * FROM smart_license INNER JOIN smart_sn ON smart_license.ID_LICENSE = smart_sn.CLEF_ID AND smart_sn.ID = :id');
       $req->execute(array(
           'id' => $id));
 
@@ -63,6 +63,12 @@ require_once('dbConn.php'); ?>
 	                </div>
 	              </div>
 	              <div class="form-group">
+	                <label for="clef" class="control-label col-md-4">License :</label>
+	                <div class="col-md-8">
+	                  <input type="text" placeholder="Clef de license" name="clef" class="form-control" value="<?php echo $data["CLEF"]; ?>" />
+	                </div>
+	              </div>
+	              <div class="form-group">
 	                <label for="date" class="control-label col-md-4">Date validité :</label>
 	                <div class="col-md-8">
 	                  <input type="date" name="date" class="form-control" value="<?php echo $data["DATE"]; ?>" />
@@ -75,8 +81,8 @@ require_once('dbConn.php'); ?>
 	                </div>
 	              </div>
 	              <div id="sn_area">
-	                <input id="hiddenclef" type="hidden" name="hiddenclef" value="<?php echo $data["CLEF"]; ?>" />
-	                <input id="hiddensn" type="hidden" name="hiddensn" value="<?php echo $data["S_N"]; ?>" />
+	                <input id="hiddenclef" type="hidden" name="hiddenclef" value="<?php echo $data["ID_LICENSE"]; ?>" />
+	                <input id="hiddensn" type="hidden" name="hiddensn" value="<?php echo $data["ID"]; ?>" />
 	                <div class="form-group">
 	                  <label for="sn" class="control-label col-md-4">S/N :</label>
 	                  <div class="col-md-8">
