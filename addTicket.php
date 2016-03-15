@@ -53,7 +53,7 @@ if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 		$headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
 		$headers .= 'From: "ITECH"<'.$expediteur.'>'."\n"; // Expediteur
 		$headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
-		mail($_SESSION['destinataire'], $_SESSION['objet'], $_SESSION['message'], $_SESSION['headers']);
+		mail($destinataire, $expediteur, $objet, $headers);
 	}
 	if(count($_FILES['files']['name']) > 0) {
 		for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
