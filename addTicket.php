@@ -44,16 +44,16 @@ if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 						'marque' => $_POST['marque'],
 						'modele' => $_POST['modele'],
 						'n_serie' => $_POST['noserie']));
-		$destinataire = 'dupont.louis4@gmail.com';
+		$destinataire = 'jerome.dupire@itech-informatique.com';
 		$expediteur = 'coucou@itech-informatique.com';
 		$objet = "[".$_POST['ref_client']."] ".$_POST['marque'].' '.$_POST['modele'].' '.$_POST['noserie'];
-		$message = "Description du ticket : ".$_POST['description'];
+		$message = "Description du ticket : <br />".$_POST['description'];
 		$headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
 		$headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n";
 		$headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
 		$headers .= 'From: "ITECH"<'.$expediteur.'>'."\n"; // Expediteur
 		$headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
-		mail($destinataire, $expediteur, $objet, $headers);
+		mail($destinataire, $objet, $message, $headers);
 	}
 	if(count($_FILES['files']['name']) > 0) {
 		for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
