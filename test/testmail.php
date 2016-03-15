@@ -1,0 +1,1 @@
+<?php mail('jerome.dupire@itech-informatique.com', 'salut', 'salut'); ?>
