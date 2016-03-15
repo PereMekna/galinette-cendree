@@ -1,6 +1,6 @@
 <?php
 $destinataire = 'jerome.dupire@itech-informatique.com';
-$expediteur = 'coucou@itech-informatique.com';
+$expediteur = 'jb@itech-informatique.com';
 $objet = "coucou";
 $message = "Description du ticket : <br />";
 $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
@@ -9,8 +9,9 @@ $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
 $headers .= 'From: "ITECH"<'.$expediteur.'>'."\n"; // Expediteur
 $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
 mail($destinataire, $objet, $message, $headers);
+
 $destinataire = 'dupont.louis4@gmail.com';
-$expediteur = 'coucou@itech-informatique.com';
+$expediteur = 'jb@itech-informatique.com';
 $objet = "coucou";
 $message = "Description du ticket : <br />";
 $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
