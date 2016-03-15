@@ -56,6 +56,7 @@
             <li><a href="#" class="small" data-value="ec" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('ec') ?></a></li>
             <li><a href="#" class="small" data-value="arc" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('arc') ?></a></li>
             <li><a href="#" class="small" data-value="ap" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('ap') ?></a></li>
+            <li><a href="#" class="small" data-value="arf" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('arf') ?></a></li>
             <li><a href="#" class="small" data-value="te" tabIndex="-1"><input type="checkbox" />&nbsp;<?php echo abbrToFull('te') ?></a></li>
             <li><a href="#" class="small" data-value="tl" tabIndex="-1"><input type="checkbox" />&nbsp;<?php echo abbrToFull('tl') ?></a></li>
           </ul>
@@ -107,7 +108,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script>
-        var options = ["maint", "atel", "mont", "sav", "site", "pro", "part", "col", "edu", "af", "ec", "arc", "ap"];
+        var options = ["maint", "atel", "mont", "sav", "site", "pro", "part", "col", "edu", "af", "ec", "arc", "ap", "arf"];
 
 
         $( '.dropdown-menu a' ).on( 'click', function( event ) {
@@ -142,6 +143,7 @@
                 case 'ec': url+='ec=1&'; break;
                 case 'arc': url+='arc=1&'; break;
                 case 'ap': url+='ap=1&'; break;
+                case 'arf': url+='arf=1&'; break;
                 case 'te': url+='te=1&'; break;
                 case 'tl': url+='tl=1&'; break;
              }
@@ -177,6 +179,7 @@
                case 'ec': url+='ec=1&'; break;
                case 'arc': url+='arc=1&'; break;
                case 'ap': url+='ap=1&'; break;
+               case 'arf': url+='arf=1&'; break;
                case 'te': url+='te=1&'; break;
                case 'tl': url+='tl=1&'; break;
             }

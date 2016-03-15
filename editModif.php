@@ -51,6 +51,7 @@
               <option value="ec" <?php if ($resultat['AVANCEMENT'] == 'ec') echo 'selected'; ?>><?php echo abbrToFull('ec') ?></option>
               <option value="arc" <?php if ($resultat['AVANCEMENT'] == 'arc') echo 'selected'; ?>><?php echo abbrToFull('arc') ?></option>
               <option value="ap" <?php if ($resultat['AVANCEMENT'] == 'ap') echo 'selected'; ?>><?php echo abbrToFull('ap') ?></option>
+              <option value="arf" <?php if ($resultat['AVANCEMENT'] == 'arf') echo 'selected'; ?>><?php echo abbrToFull('arf') ?></option>
               <option value="te" <?php if ($resultat['AVANCEMENT'] == 'te') echo 'selected'; ?>><?php echo abbrToFull('te') ?></option>
               <option value="tl" <?php if ($resultat['AVANCEMENT'] == 'tl') echo 'selected'; ?>><?php echo abbrToFull('tl') ?></option>
             </select>

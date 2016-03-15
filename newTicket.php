@@ -127,7 +127,7 @@
                 <textarea id="text1" class="form-control" rows="5" required title="Description " name="description"></textarea>
               </div>
               <label for="bc" class="control-label col-md-2">Fichier(s) à ajouter :</label>
-              <div class="col-md-4">
+              <div class="col-md-4" style="display:none">
                   <span class="btn btn-success fileinput-button">
                       <i class="glyphicon glyphicon-plus"></i>
                       <span>Select files...</span>
@@ -144,6 +144,14 @@
                   <div id="files" class="files"></div>
               </div>
               
+              </div>
+              <div class="form-group" style="display:none">
+                <div class="checkbox col-md-offset-2 col-md-2" >
+                  <label for="mailrappel"><input type="checkbox" id="mailrappel" name="mailrappel" value="mail" /> Rappel par mail</label>
+                </div>
+                <div class="col-md-2">
+                <input type="date" class="form-control" id="daterappel" name="daterappel" style="display:none" />
+              </div>
               </div>
             <div class="form-group"> 
                 <div class="col-md-offset-2 col-md-4">
@@ -171,6 +179,12 @@
           } 
       });
   });
+      $('#mailrappel').click(function() {
+        if($("#mailrappel").is(':checked'))
+            $("#daterappel").fadeIn();  // checked
+        else
+            $("#daterappel").fadeOut();  // unchecked
+      })
 
     function showCustomer(str) {
     if (str == "") {

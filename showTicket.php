@@ -176,6 +176,7 @@
                     <option value="ec"><?php echo abbrToFull('ec') ?></option>
                     <option value="arc"><?php echo abbrToFull('arc') ?></option>
                     <option value="ap"><?php echo abbrToFull('ap') ?></option>
+                    <option value="arf"><?php echo abbrToFull('arf') ?></option>
                     <option value="te"><?php echo abbrToFull('te') ?></option>
                     <option value="tl"><?php echo abbrToFull('tl') ?></option>
                   </select>

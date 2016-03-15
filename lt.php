@@ -17,7 +17,7 @@ require_once('dbConn.php');
   if (isset($_GET['col'])) $req .= 'type_client = "col" OR ';
   if (isset($_GET['edu'])) $req .= 'type_client = "edu" OR ';
 
-  if ((isset($_GET['atel']) || isset($_GET['maint']) || isset($_GET['mont']) || isset($_GET['sav']) || isset($_GET['site']) || isset($_GET['pro']) || isset($_GET['part']) || isset($_GET['col']) || isset($_GET['edu'])) && (isset($_GET['af']) || isset($_GET['ec']) || isset($_GET['arc']) || isset($_GET['ap']) || isset($_GET['te']) || isset($_GET['tl']))) {
+  if ((isset($_GET['atel']) || isset($_GET['maint']) || isset($_GET['mont']) || isset($_GET['sav']) || isset($_GET['site']) || isset($_GET['pro']) || isset($_GET['part']) || isset($_GET['col']) || isset($_GET['edu'])) && (isset($_GET['af']) || isset($_GET['ec']) || isset($_GET['arc']) || isset($_GET['ap']) || isset($_GET['arf']) || isset($_GET['te']) || isset($_GET['tl']))) {
     $req = substr($req,0,strlen($req)-4);
     $req .= ') AND (';
   }
@@ -25,6 +25,7 @@ require_once('dbConn.php');
   if (isset($_GET['ec'])) $req .= 'AVANCEMENT = "ec" OR ';
   if (isset($_GET['arc'])) $req .= 'AVANCEMENT = "arc" OR ';
   if (isset($_GET['ap'])) $req .= 'AVANCEMENT = "ap" OR ';
+  if (isset($_GET['arf'])) $req .= 'AVANCEMENT = "arf" OR ';
   if (isset($_GET['te'])) $req .= 'AVANCEMENT = "te" OR ';
   if (isset($_GET['tl'])) $req .= 'AVANCEMENT = "tl" OR ';
 
@@ -35,7 +36,7 @@ require_once('dbConn.php');
   $req .= ')';
   
   if (!(isset($_GET['atel']) || isset($_GET['maint']) || isset($_GET['mont']) || isset($_GET['sav']) || isset($_GET['site']) || isset($_GET['pro']) || isset($_GET['part']) || isset($_GET['col']) || isset($_GET['edu']) || isset($_GET['af']) || isset($_GET['ec']) || isset($_GET['arc']) || isset($_GET['ap']) || isset($_GET['te']) || isset($_GET['tl']))) {
-    $req = 'SELECT * FROM tickets WHERE (AVANCEMENT = "af" OR AVANCEMENT = "ec" OR AVANCEMENT = "arc" OR AVANCEMENT = "ap")';
+    $req = 'SELECT * FROM tickets WHERE (AVANCEMENT = "af" OR AVANCEMENT = "ec" OR AVANCEMENT = "arc" OR AVANCEMENT = "ap" OR AVANCEMENT = "arf")';
   }
 
   

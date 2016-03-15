@@ -37,6 +37,9 @@ function abbrToFull($str) {
 	  else if ($str == 'arc') {
 	    $str = 'En attente réponse client';
 	  }
+	  else if ($str == 'arf') {
+	  	$str = 'En attente fournisseur/fabricant';
+	  }
 	  else if ($str == 'ap') {
 	    $str = 'En attente pièce(s)';
 	  }

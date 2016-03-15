@@ -2,7 +2,7 @@
 require_once('../dbConn.php');
 require_once('../inc/functions.php');
 ?>
-<html lang="fr">
+<html lang="fr" id="html">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@ require_once('../inc/functions.php');
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="body">
 
   <?php 
   if (!isset($_SESSION["login"])) {
@@ -66,5 +66,17 @@ require_once('../inc/functions.php');
 	  	</div>
 	  </div>
   </div>
+  <script>
+  window.onload = function(){ 
+        var elem = document.getElementById("html");
+
+    elem.onclick = function() {
+        req = elem.requestFullScreen || elem.webkitRequestFullScreen || elem.mozRequestFullScreen;
+        req.call(elem);
+    }
+};
+
+    </script>
 </body>
+
 </html>
