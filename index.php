@@ -37,6 +37,7 @@
         </div>
         <div class="col-sm-4">
           <div class="pull-right">
+            <a class="btn btn-primary" href="allTickets.php"><span class="glyphicon glyphicon-th-list"></span> Tous les tickets</a>
             <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
           </div>
         </div>
