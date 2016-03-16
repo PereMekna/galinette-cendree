@@ -23,14 +23,6 @@ require_once('../inc/functions.php');
     <![endif]-->
   </head>
   <body id="body">
-
-  <?php 
-  if (!isset($_SESSION["login"])) {
-    header('Location: ../login.php');
-    exit();
-  }
-  
-  ?>
   <div class="container">
   	<div id="global">
 	  	<div class="row">
@@ -40,7 +32,7 @@ require_once('../inc/functions.php');
         <div class="col-md-2 col-md-offset-6">
           <div class="form-group">
             <label class="control-label">Nb de lignes :</label>
-              <input type="number" id="row" class="form-control col-md-2" step="1" value="1" min="1" max="10" />
+              <input type="number" id="row" class="form-control col-md-2" step="1" value="5" min="1" max="12" />
           </div>
         </div>
 	  	</div>
