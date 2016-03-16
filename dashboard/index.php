@@ -71,7 +71,7 @@ require_once('../inc/functions.php');
     $('.show-alert#col').load('getAlert.php?cat=col&nb_row='+nb_row);
   };
 
-  var interval = 1000 * 1; // where X is your every X minutes
+  var interval = 1000 * 1;
 
   setInterval(reload, interval);
 

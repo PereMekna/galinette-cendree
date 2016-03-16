@@ -14,3 +14,12 @@ body {
 	background-color: #FFFFFF;
 	color: #000000;
 }
+
+.show-alert table {
+	-webkit-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+
+.container {
+	width: 80%;
+}
