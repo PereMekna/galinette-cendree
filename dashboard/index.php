@@ -34,7 +34,15 @@ require_once('../inc/functions.php');
   <div class="container">
   	<div id="global">
 	  	<div class="row">
-	  		<h1>Supervision atelier</h1>
+        <div class="col-md-4">
+  	  		<h1>Supervision atelier</h1>
+        </div>
+        <div class="col-md-2 col-md-offset-6">
+          <div class="form-group">
+            <label class="control-label">Nb de lignes :</label>
+              <input type="number" id="row" class="form-control col-md-2" step="1" value="1" min="1" max="10" />
+          </div>
+        </div>
 	  	</div>
 	  	<div class="row">
 	  		<div class="col-lg-6">
@@ -61,12 +69,14 @@ require_once('../inc/functions.php');
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script>
+  
 
   var reload = function() {
-    $('.show-alert#pro').load('getAlert.php?cat=pro');
-    $('.show-alert#part').load('getAlert.php?cat=part');
-    $('.show-alert#edu').load('getAlert.php?cat=edu');
-    $('.show-alert#col').load('getAlert.php?cat=col');
+    var nb_row = $('#row').val();
+    $('.show-alert#pro').load('getAlert.php?cat=pro&nb_row='+nb_row);
+    $('.show-alert#part').load('getAlert.php?cat=part&nb_row='+nb_row);
+    $('.show-alert#edu').load('getAlert.php?cat=edu&nb_row='+nb_row);
+    $('.show-alert#col').load('getAlert.php?cat=col&nb_row='+nb_row);
   };
 
   var interval = 1000 * 1; // where X is your every X minutes

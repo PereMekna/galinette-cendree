@@ -1,7 +1,7 @@
 <?php 
 require_once('../dbConn.php');
 require_once('../inc/functions.php');
-$max_row = 5;
+$max_row = $_GET['nb_row'];
 $cat = $_GET['cat'];
 
 
