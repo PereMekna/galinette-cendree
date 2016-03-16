@@ -50,7 +50,7 @@
         <div class="pull-right">
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-glass"></span>&nbsp;<span class="caret"></span></button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu options">
             <li class="dropdown-header">Afficher les catégories</li>
             <li><a href="#" class="small" data-value="af" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('af') ?></a></li>
             <li><a href="#" class="small" data-value="ec" tabIndex="-1"><input type="checkbox" checked />&nbsp;<?php echo abbrToFull('ec') ?></a></li>
@@ -63,7 +63,7 @@
         </span>
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span>&nbsp;<span class="caret"></span></button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu options">
             <li class="dropdown-header">Afficher les catégories</li>
             <li><a href="#" class="small" data-value="atel" tabIndex="-1"><input type="checkbox" checked />&nbsp;Atelier</a></li>
             <li><a href="#" class="small" data-value="maint" tabIndex="-1"><input type="checkbox" checked />&nbsp;Maintenance</a></li>
@@ -74,7 +74,7 @@
         </span>
         <span class="dropdown">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;<span class="caret"></span></button>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu options">
             <li class="dropdown-header">Type de client</li>
             <li><a href="#" class="small" data-value="pro" tabIndex="-1"><input type="checkbox" checked />&nbsp;Professionel</a></li>
             <li><a href="#" class="small" data-value="part" tabIndex="-1"><input type="checkbox" checked />&nbsp;Particulier</a></li>
@@ -104,14 +104,13 @@
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="jquery-ui.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
         <script>
         var options = ["maint", "atel", "mont", "sav", "site", "pro", "part", "col", "edu", "af", "ec", "arc", "ap", "arf"];
 
 
-        $( '.dropdown-menu a' ).on( 'click', function( event ) {
+        $( '.options a' ).on( 'click', function( event ) {
 
            var $target = $( event.currentTarget ),
                val = $target.attr( 'data-value' ),
@@ -196,8 +195,5 @@
 
 
         </script>
-        <?php
-        //$reponse->closeCursor(); ?>
-  
   </body>
 </html>
