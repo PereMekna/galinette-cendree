@@ -26,10 +26,10 @@ require_once('../inc/functions.php');
 
   <?php 
   if (!isset($_SESSION["login"])) {
-    header('Location: ./login.php');
+    header('Location: ../login.php');
     exit();
   }
-  $max_row = 5;
+  
   ?>
   <div class="container">
   	<div id="global">
@@ -39,42 +39,39 @@ require_once('../inc/functions.php');
 	  	<div class="row">
 	  		<div class="col-lg-6">
 	  			<h2>Professionnel</h2>
-	  			<?php
-	  			$cat = "pro";
-	  			include 'getAlert.php'; ?>
+          <div class ="alert" id="pro"></div>
 	  		</div>
 	  		<div class="col-lg-6">
 	  			<h2>Collectivité</h2>
-	  			<?php 
-	        	$cat = "col";
-	        	include 'getAlert.php'; ?>
+            <div class ="alert" id="col"></div>
 	  		</div>
 	  	</div>
 	  	<div class="row">
 	  		<div class="col-lg-6">
 	  			<h2>Particulier</h2>
-	  			<?php 
-	  			$cat = "part";
-	  			include 'getAlert.php'; ?>
+          <div class ="alert" id="part"></div>
 	  		</div>
 	  		<div class="col-lg-6">
 	  			<h2>Éducation</h2>
-	  			<?php 
-	  			$cat = "edu";
-	  			include 'getAlert.php'; ?>
+          <div class ="alert" id="edu"></div>
 	  		</div>
 	  	</div>
 	  </div>
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
   <script>
-  window.onload = function(){ 
-        var elem = document.getElementById("html");
 
-    elem.onclick = function() {
-        req = elem.requestFullScreen || elem.webkitRequestFullScreen || elem.mozRequestFullScreen;
-        req.call(elem);
-    }
-};
+  var reload = function() {
+    $('.alert#pro').load('getAlert.php?cat=pro');
+    $('.alert#part').load('getAlert.php?cat=part');
+    $('.alert#edu').load('getAlert.php?cat=edu');
+    $('.alert#col').load('getAlert.php?cat=col');
+  };
+
+  var interval = 1000 * 1; // where X is your every X minutes
+
+  setInterval(reload, interval);
 
     </script>
 </body>

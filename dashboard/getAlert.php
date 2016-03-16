@@ -1,9 +1,14 @@
 <?php 
+require_once('../dbConn.php');
+require_once('../inc/functions.php');
+$max_row = 5;
+$cat = $_GET['cat'];
+
 
     $count = 0;
 
     $requete = $db->prepare("SELECT * FROM tickets WHERE TYPE_CLIENT = :type_client AND (AVANCEMENT = 'af' OR AVANCEMENT = 'ec' OR AVANCEMENT = 'arc' OR AVANCEMENT = 'ap') ORDER BY PRIORITE DESC");
-    $requete->bindValue(':type_client', $cat);
+    $requete->bindValue('type_client', $cat);
     $requete->execute();
     $nbrow = $requete->rowCount();
     $today = new DateTime();
