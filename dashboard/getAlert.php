@@ -7,7 +7,7 @@ $cat = $_GET['cat'];
 
     $count = 0;
 
-    $requete = $db->prepare("SELECT * FROM tickets WHERE TYPE_CLIENT = :type_client AND (AVANCEMENT = 'af' OR AVANCEMENT = 'ec' OR AVANCEMENT = 'arc' OR AVANCEMENT = 'ap') ORDER BY PRIORITE DESC");
+    $requete = $db->prepare("SELECT * FROM tickets WHERE TYPE_CLIENT = :type_client AND (AVANCEMENT = 'af' OR AVANCEMENT = 'ec' OR AVANCEMENT = 'arc' OR AVANCEMENT = 'ap' OR AVANCEMENT = 'arf') ORDER BY PRIORITE DESC");
     $requete->bindValue('type_client', $cat);
     $requete->execute();
     $nbrow = $requete->rowCount();
@@ -33,7 +33,7 @@ $cat = $_GET['cat'];
         if(++$count >= $max_row) break;
     }
 
-    if ($nbrow > $max_row) echo '<tr><td><a class="btn btn-default" href="allTickets.php">Tickets suivants <span class="badge">'.($nbrow-$max_row).'</span></a></td></tr>';
+    if ($nbrow > $max_row) echo '<tr class="alert alert-info"><td>Tickets suivants <span class="badge">'.($nbrow-$max_row).'</span></td></tr>';
 
 ?>
 
