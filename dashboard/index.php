@@ -39,21 +39,21 @@ require_once('../inc/functions.php');
 	  	<div class="row">
 	  		<div class="col-lg-6">
 	  			<h2>Professionnel</h2>
-          <div class ="alert" id="pro"></div>
+          <div class ="show-alert" id="pro"></div>
 	  		</div>
 	  		<div class="col-lg-6">
 	  			<h2>Collectivité</h2>
-            <div class ="alert" id="col"></div>
+            <div class ="show-alert" id="col"></div>
 	  		</div>
 	  	</div>
 	  	<div class="row">
 	  		<div class="col-lg-6">
 	  			<h2>Particulier</h2>
-          <div class ="alert" id="part"></div>
+          <div class ="show-alert" id="part"></div>
 	  		</div>
 	  		<div class="col-lg-6">
 	  			<h2>Éducation</h2>
-          <div class ="alert" id="edu"></div>
+          <div class ="show-alert" id="edu"></div>
 	  		</div>
 	  	</div>
 	  </div>
@@ -63,10 +63,10 @@ require_once('../inc/functions.php');
   <script>
 
   var reload = function() {
-    $('.alert#pro').load('getAlert.php?cat=pro');
-    $('.alert#part').load('getAlert.php?cat=part');
-    $('.alert#edu').load('getAlert.php?cat=edu');
-    $('.alert#col').load('getAlert.php?cat=col');
+    $('.show-alert#pro').load('getAlert.php?cat=pro');
+    $('.show-alert#part').load('getAlert.php?cat=part');
+    $('.show-alert#edu').load('getAlert.php?cat=edu');
+    $('.show-alert#col').load('getAlert.php?cat=col');
   };
 
   var interval = 1000 * 1; // where X is your every X minutes

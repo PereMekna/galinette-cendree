@@ -20,6 +20,7 @@ require_once('dbConn.php');
             <li id="dashboard" <?php if (preg_match('#index.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="index.php">Tableau de bord</a></li>
             <li id="newTicket" <?php if (preg_match('#newTicket.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="newTicket.php">Nouveau ticket</a></li>
             <li id="ticketList" <?php if (preg_match('#allTickets.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="allTickets.php">Tickets ouverts</a></li>
+            <li role="separator" class="divider"></li>
             <li id="supervision"><a href="./dashboard/index.php">Supervision atelier</a></li>
           </ul>
         </li>

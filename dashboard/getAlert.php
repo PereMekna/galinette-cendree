@@ -15,7 +15,7 @@ $cat = $_GET['cat'];
 
     echo '<table class="table">';
     if ($nbrow == 0) {
-        echo '<tr><td>Pas de ticket ouvert dans cette catégorie.</td></tr>';
+        echo '<tr class="alert"><td>Pas de ticket ouvert dans cette catégorie.</td></tr>';
     }
     while ($data = $requete->fetch()) {
     	if ($data["PRIORITE"] == 0) $class = "alert alert-success";
@@ -33,7 +33,7 @@ $cat = $_GET['cat'];
         if(++$count >= $max_row) break;
     }
 
-    if ($nbrow > $max_row) echo '<tr class="alert alert-info"><td>Tickets suivants <span class="badge">'.($nbrow-$max_row).'</span></td></tr>';
+    if ($nbrow > $max_row) echo '<tr class="alert alert-info"><td>Encore <span class="badge">'.($nbrow-$max_row).'</span> autre(s) ticket(s)</td></tr>';
 
 ?>
 
