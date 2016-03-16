@@ -23,7 +23,7 @@ require_once('../inc/functions.php');
     <![endif]-->
   </head>
   <body id="body">
-  <div class="container">
+  <div class="container-bail">
   	<div id="global">
 	  	<div class="row">
         <div class="col-md-4">

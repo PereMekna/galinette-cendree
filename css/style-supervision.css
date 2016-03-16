@@ -1,5 +1,5 @@
 body {
-	background-image: url("../img/bg.jpeg");
+	background-color: #000000;
 	margin-top: 50px;
 }
 
@@ -20,6 +20,7 @@ body {
 	transition: all .5s ease-in-out;
 }
 
-.container {
-	width: 80%;
+.container-bail {
+	width: 90%;
+	margin-left: 5%;
 }
