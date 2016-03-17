@@ -1,6 +1,6 @@
 body {
 	background-color: #000000;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 #global {
@@ -21,8 +21,8 @@ body {
 }
 
 .container-bail {
-	width: 90%;
-	margin-left: 5%;
+	width: 96%;
+	margin-left: 2%;
 }
 
 .alert-danger {
@@ -71,8 +71,4 @@ tr .alert {
 
 .clickable-row {
     cursor: pointer;
-}
-
-td {
-	font-weight: bolder;
 }
