@@ -7,7 +7,7 @@ $cat = $_GET['cat'];
 
     $count = 0;
 
-    $requete = $db->prepare("SELECT * FROM tickets WHERE TYPE_CLIENT = :type_client AND (AVANCEMENT = 'af' OR AVANCEMENT = 'ec' OR AVANCEMENT = 'arc' OR AVANCEMENT = 'ap' OR AVANCEMENT = 'arf') ORDER BY PRIORITE DESC");
+    $requete = $db->prepare("SELECT * FROM tickets WHERE TYPE_CLIENT = :type_client AND TYPE_INTER <> 'sav' AND (AVANCEMENT = 'af' OR AVANCEMENT = 'ec' OR AVANCEMENT = 'arc' OR AVANCEMENT = 'ap' OR AVANCEMENT = 'arf') ORDER BY PRIORITE DESC");
     $requete->bindValue('type_client', $cat);
     $requete->execute();
     $nbrow = $requete->rowCount();
