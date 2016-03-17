@@ -32,10 +32,10 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-6">
           <h1>Tableau de bord</h1>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="pull-right">
             <a class="btn btn-primary" href="allTickets.php"><span class="glyphicon glyphicon-th-list"></span> Tous les tickets</a>
             <a class="btn btn-success" href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a>
