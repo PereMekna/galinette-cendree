@@ -61,7 +61,10 @@ require_once('../inc/functions.php');
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script>
-  
+  $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+
+    });
 
   var reload = function() {
     var nb_row = $('#row').val();

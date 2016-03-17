@@ -13,7 +13,7 @@ $cat = $_GET['cat'];
     $nbrow = $requete->rowCount();
     $today = new DateTime();
 
-    echo '<table class="table">';
+    echo '<table class="table table-alert">';
     if ($nbrow == 0) {
         echo '<tr class="alert"><td>Pas de ticket ouvert dans cette catégorie.</td></tr>';
     }
@@ -28,8 +28,7 @@ $cat = $_GET['cat'];
         }
     	else $days = $datelivraison->diff($today)->format('Dépassé de %r%a jour(s)');
 
-    	echo '<tr class="'.$class.'"><td>
-          <strong>'.abbrToFull($data["AVANCEMENT"]).' : '.abbrToFull($data["TYPE_INTER"]).' pour '.$data["REF_CLIENT"].'.</strong> '.$days.'.</td></tr>';
+    	echo '<tr class="clickable-row" data-href="../showTicket.php?id='.$data["ID"].'" ><td><strong>'.abbrToFull($data["AVANCEMENT"]).' : '.abbrToFull($data["TYPE_INTER"]).' pour '.$data["REF_CLIENT"].'.</strong> '.$days.'.</td><td class="'.$class.'">&nbsp;</td></tr>';
         if(++$count >= $max_row) break;
     }
 
@@ -38,3 +37,11 @@ $cat = $_GET['cat'];
 ?>
 
 </table>
+<script>
+  jQuery(document).ready(function($) {
+      $(".clickable-row").click(function() {
+          window.document.location = $(this).data("href");
+
+      });
+  });
+  </script>

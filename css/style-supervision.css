@@ -10,7 +10,7 @@ body {
 	color: #000000;
 }
 
-.alert {
+.table-alert {
 	background-color: #FFFFFF;
 	color: #000000;
 }
@@ -23,4 +23,52 @@ body {
 .container-bail {
 	width: 90%;
 	margin-left: 5%;
+}
+
+.alert-danger {
+	color : #FFFFFF;
+	background-color: #d9534f;
+	border-color: #d43f3a;
+}
+
+.alert-warning {
+    color: #FFFFFF;
+    background-color: #f0ad4e;
+	border-color: #eea236;
+}
+
+.alert-success {
+	color: #FFFFFF;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.alert-link {
+    text-decoration: none !important;
+}
+
+tr:hover .alert-danger {
+	color : #FFFFFF;
+	background-color: #d43f3a;
+	border-color: #d43f3a;
+}
+
+tr:hover .alert-warning {
+    color: #FFFFFF;
+    background-color: #eea236;
+    border-color: #eea236;
+}
+
+tr:hover .alert-success {
+	color: #FFFFFF;
+    background-color: #4cae4c;
+    border-color: #4cae4c;
+}
+
+tr .alert {
+	border-radius: 0px;
+}
+
+.clickable-row {
+    cursor: pointer;
 }
