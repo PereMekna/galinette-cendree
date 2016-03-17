@@ -17,11 +17,11 @@ require_once('dbConn.php');
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tickets <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li id="dashboard" <?php if (preg_match('#index.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="index.php">Tableau de bord</a></li>
-            <li id="newTicket" <?php if (preg_match('#newTicket.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="newTicket.php">Nouveau ticket</a></li>
-            <li id="ticketList" <?php if (preg_match('#allTickets.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="allTickets.php">Tickets ouverts</a></li>
+            <li id="dashboard" <?php if (preg_match('#index.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="index.php"><span class="glyphicon glyphicon-tasks"></span> Tableau de bord</a></li>
+            <li id="newTicket" <?php if (preg_match('#newTicket.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="newTicket.php"><span class="glyphicon glyphicon-plus"></span> Nouveau ticket</a></li>
+            <li id="ticketList" <?php if (preg_match('#allTickets.php#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="allTickets.php"><span class="glyphicon glyphicon-list"></span> Tickets ouverts</a></li>
             <li role="separator" class="divider"></li>
-            <li id="supervision"><a href="./dashboard/index.php">Supervision atelier</a></li>
+            <li id="supervision"><a href="./dashboard/index.php"><span class="glyphicon glyphicon-new-window"></span> Supervision atelier</a></li>
           </ul>
         </li>
         <li id="smartLicense" <?php if (preg_match('#smart#', $_SERVER['REQUEST_URI'])) {echo 'class="active"';} ?>><a href="smartLicense.php">Licenses SMART</a></li>
