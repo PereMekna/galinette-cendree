@@ -16,5 +16,6 @@
 		}
 		?>
 
-		<div class="form-group"><a class="btn btn-default col-md-offset-4" href="#" id="update"><span class="glyphicon glyphicon-refresh"></span></a></div>
+		<div class="pull-right"><a class="btn btn-default" href="#" id="update"><span class="glyphicon glyphicon-refresh"></span></a></div>
+		<div id="info"></div>
 </form>

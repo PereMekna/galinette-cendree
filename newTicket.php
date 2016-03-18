@@ -15,6 +15,15 @@
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
     <link rel="stylesheet" href="css/jquery.fileupload.css">
 
+    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/extras/modernizr-custom.js"></script>
+    <!-- polyfiller file to detect and load polyfills -->
+    <script src="http://cdn.jsdelivr.net/webshim/1.12.4/polyfiller.js"></script>
+    <script>
+      webshims.setOptions('waitReady', false);
+      webshims.setOptions('forms-ext', {types: 'date'});
+      webshims.polyfill('forms forms-ext');
+    </script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -291,13 +300,13 @@
     });
 
     $('#description').on('click', '#update', function() {
-      console.log('coucou');
       $.post('customerUpdate.php',
       {
         id: $('#hiddenid').val(),
         telephone: $('#telephone').val(),
         mail: $('#mail').val()
       });
+      $('#info').append('<p>Informations mises à jour</p>');
       
     });
 
