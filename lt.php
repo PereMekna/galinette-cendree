@@ -77,7 +77,7 @@ require_once('dbConn.php');
     else if ($priorite == 1) $tr = '<td class="warning">';
     else if ($priorite == 2) $tr = '<td class="danger">';
 
-    echo '<tr class="clickable-row" data-href="./showTicket.php?id='.$id.'"><td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td><td>'.$n_bc.'</td>'.$tr.'&nbsp;&nbsp;</td></tr>';}
+    echo '<tr class="clickable-row" data-href="./showTicket.php?id='.$id.'"><td>'.$id.'</td><td>'.$ref_client.' ('.$type_client.')</td><td>'.$date_format.'</td><td>'.$type_inter.'</td><td>'.$avancement.'</td><td>'.$n_bc.'</td>'.$tr.'&nbsp;&nbsp;</td></tr>';}
   
   }
   ?>

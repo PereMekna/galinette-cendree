@@ -32,7 +32,7 @@ $cat = $_GET['cat'];
         if(++$count >= $max_row) break;
     }
 
-    if ($nbrow > $max_row) echo '<tr class="alert alert-info"><td>Encore <span class="badge">'.($nbrow-$max_row).'</span> autre(s) ticket(s)</td></tr>';
+    if ($nbrow > $max_row) echo '<tr><td>Encore <span class="badge">'.($nbrow-$max_row).'</span> autre(s) ticket(s)</td></tr>';
 
 ?>
 

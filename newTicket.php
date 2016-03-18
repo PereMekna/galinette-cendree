@@ -126,7 +126,7 @@
               <div class="col-md-4">
                 <textarea id="text1" class="form-control" rows="5" required title="Description " name="description"></textarea>
               </div>
-              <label for="bc" class="control-label col-md-2">Fichier(s) à ajouter :</label>
+              <label for="bc" class="control-label col-md-2" style="display:none;">Fichier(s) à ajouter :</label>
               <div class="col-md-4" style="display:none">
                   <span class="btn btn-success fileinput-button">
                       <i class="glyphicon glyphicon-plus"></i>
@@ -214,6 +214,7 @@
         showCustomer(ui.item.value); // on ajoute la description de l'objet dans un bloc
         $("#autocomplete").prop("readonly", true);
         $("#lock").prop("disabled", false);
+        $("#typeclient").focus();
       }
     });
     $( "#dialog-link, #icons li" ).hover(
@@ -288,6 +289,18 @@
         }).prop('disabled', !$.support.fileInput)
             .parent().addClass($.support.fileInput ? undefined : 'disabled');
     });
+
+    $('#description').on('click', '#update', function() {
+      console.log('coucou');
+      $.post('customerUpdate.php',
+      {
+        id: $('#hiddenid').val(),
+        telephone: $('#telephone').val(),
+        mail: $('#mail').val()
+      });
+      
+    });
+
     </script>
   </body>
 </html>

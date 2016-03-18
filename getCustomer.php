@@ -1,6 +1,7 @@
-
+	<form>
 		<?php
 		$q = $_GET['q'];
+		echo '<input type="hidden" id="hiddenid" value="'.$q.'" />';
 
 		require_once('dbConn.php');
 
@@ -9,8 +10,11 @@
 
 		while ($data = $requete->fetch())
 		{
-			echo '<div class="row"><label class="control-label col-md-4">Intitulé client :</label><div class="col-md-8"><p class="form-control-static">'.$data['NOM'].'</p></div></div>';
-			echo '<div class="row"><label class="control-label col-md-4">Téléphone :</label><div class="col-md-8"><p class="form-control-static">'.$data['TEL'].'</p></div></div>';
-			echo '<div class="row"><label class="control-label col-md-4">Mail :</label><div class="col-md-8"><p class="form-control-static">'.$data['MAIL'].'</p></div></div>';
+			echo '<div class="form-group"><label class="control-label col-md-4">Intitulé client :</label><div class="col-md-8"><p class="form-control-static">'.$data['NOM'].'</p></div></div>';
+			echo '<div class="form-group"><label class="control-label col-md-4">Téléphone :</label><div class="col-md-8"><input id="telephone" class="form-control"  value="'.$data['TEL'].'" /></div></div>';
+			echo '<div class="form-group"><label class="control-label col-md-4">Mail :</label><div class="col-md-8"><input id="mail" class="form-control" value="'.$data['MAIL'].'" /></div></div>';
 		}
 		?>
+
+		<div class="form-group"><a class="btn btn-default col-md-offset-4" href="#" id="update"><span class="glyphicon glyphicon-refresh"></span></a></div>
+</form>

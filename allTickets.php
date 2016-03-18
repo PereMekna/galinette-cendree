@@ -89,6 +89,7 @@
       <table class="table table-hover">
         <thead>
         <tr>
+          <th>ID ticket</th>
           <th>Référence client</th>
           <th>Date de livraison</th>
           <th>Description</th>

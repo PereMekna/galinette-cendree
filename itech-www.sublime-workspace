@@ -4,6 +4,54 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-size"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"alert",
+				"alert"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"mail",
+				"mailrappel"
+			],
+			[
+				"date",
+				"daterappel"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"ID",
+				"ID_LICENSE"
+			],
+			[
+				"sm",
+				"smart_sn"
+			],
+			[
+				"smart",
+				"smart_license"
+			],
+			[
+				"ed",
+				"editortext"
+			],
+			[
 				"sess",
 				"session_start"
 			],
@@ -76,14 +124,6 @@
 				"type_client"
 			],
 			[
-				"date",
-				"datelivraison"
-			],
-			[
-				"alert",
-				"alert-danger"
-			],
-			[
 				"sa",
 				"sav_marque"
 			],
@@ -98,10 +138,6 @@
 			[
 				"che",
 				"checked"
-			],
-			[
-				"mail",
-				"mail"
 			],
 			[
 				"password",
@@ -168,74 +204,18 @@
 	"buffers":
 	[
 		{
-			"file": "editModif.php",
-			"settings":
-			{
-				"buffer_size": 3372,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "smartLicense.php",
-			"settings":
-			{
-				"buffer_size": 7371,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "smartLT.php",
-			"settings":
-			{
-				"buffer_size": 2930,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "smartMailSend.php",
-			"settings":
-			{
-				"buffer_size": 264,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "smartMailError.php",
-			"settings":
-			{
-				"buffer_size": 1925,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "smartEdit.php",
-			"settings":
-			{
-				"buffer_size": 4310,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "lt.php",
-			"settings":
-			{
-				"buffer_size": 4150,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "addModif.php",
-			"settings":
-			{
-				"buffer_size": 807,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "newTicket.php",
 			"settings":
 			{
-				"buffer_size": 12225,
+				"buffer_size": 12941,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dashboard/getAlert.php",
+			"settings":
+			{
+				"buffer_size": 1822,
 				"line_ending": "Windows"
 			}
 		},
@@ -243,55 +223,7 @@
 			"file": "navbar.php",
 			"settings":
 			{
-				"buffer_size": 1811,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "css/style.css",
-			"settings":
-			{
-				"buffer_size": 2834,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "showTicket.php",
-			"settings":
-			{
-				"buffer_size": 9551,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "ns.php",
-			"settings":
-			{
-				"buffer_size": 518,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "liste.php",
-			"settings":
-			{
-				"buffer_size": 523,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "addSmartNS.php",
-			"settings":
-			{
-				"buffer_size": 933,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dbConn.php",
-			"settings":
-			{
-				"buffer_size": 169,
+				"buffer_size": 2592,
 				"line_ending": "Windows"
 			}
 		},
@@ -299,39 +231,47 @@
 			"file": "allTickets.php",
 			"settings":
 			{
-				"buffer_size": 9252,
+				"buffer_size": 9429,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "editTicket.php",
+			"file": "smartLicense.php",
 			"settings":
 			{
-				"buffer_size": 12061,
+				"buffer_size": 7417,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "smartEditDB.php",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 840,
+				"buffer_size": 2642,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "editModifDB.php",
+			"file": "css/style-supervision.css",
 			"settings":
 			{
-				"buffer_size": 691,
+				"buffer_size": 1099,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "addTicket.php",
+			"file": "css/style.css",
 			"settings":
 			{
-				"buffer_size": 1890,
+				"buffer_size": 2938,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "lt.php",
+			"settings":
+			{
+				"buffer_size": 4256,
 				"line_ending": "Windows"
 			}
 		}
@@ -339,11 +279,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
 		],
-		"width": 0.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -360,30 +304,47 @@
 	},
 	"file_history":
 	[
-		"/C/xampp/htdocs/i-tech/smartMailError.php",
-		"/C/xampp/htdocs/i-tech/lt.php",
-		"/C/xampp/htdocs/i-tech/editTicketDB.php",
-		"/C/xampp/htdocs/i-tech/editTicket.php",
-		"/C/xampp/htdocs/i-tech/login.php",
+		"/C/xampp/htdocs/i-tech/dashboard/index.php",
+		"/C/Users/Loulou/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/xampp/htdocs/i-tech/getAlert.php",
+		"/C/xampp/htdocs/i-tech/smartMailSend.php",
+		"/C/xampp/htdocs/i-tech/smartLT.php",
+		"/C/xampp/htdocs/i-tech/test/testmail.php",
 		"/C/xampp/htdocs/i-tech/addTicket.php",
-		"/C/xampp/htdocs/i-tech/allTickets.php",
-		"/C/xampp/htdocs/i-tech/deleteTicket.php",
-		"/C/xampp/htdocs/i-tech/editModifDB.php",
-		"/C/xampp/htdocs/i-tech/showTicket.php",
-		"/C/xampp/htdocs/test/css/demo.css",
-		"/C/xampp/htdocs/i-tech/dbConn.php",
-		"/C/xampp/htdocs/i-tech/inc/functions.php",
-		"/C/xampp/htdocs/i-tech/navbar.php",
-		"/C/xampp/htdocs/i-tech/logout.php",
-		"/C/xampp/htdocs/i-tech/css/style.css",
-		"/C/xampp/htdocs/i-tech/editModif.php",
-		"/C/xampp/htdocs/i-tech/addModif.php",
-		"/C/xampp/htdocs/i-tech/register.php",
-		"/C/xampp/htdocs/i-tech/liste.php",
-		"/C/xampp/htdocs/i-tech/getCustomer.php",
 		"/C/xampp/htdocs/i-tech/newTicket.php",
+		"/C/xampp/htdocs/i-tech/lt.php",
+		"/C/xampp/htdocs/i-tech/editModif.php",
+		"/C/xampp/htdocs/i-tech/inc/functions.php",
+		"/C/xampp/htdocs/i-tech/smartLicense.php",
+		"/C/xampp/htdocs/i-tech/addModif.php",
+		"/C/xampp/htdocs/i-tech/fournisseurUpdate.php",
+		"/C/xampp/htdocs/i-tech/getCustomer.php",
 		"/C/xampp/htdocs/i-tech/index.php",
+		"/C/xampp/htdocs/i-tech/editModifDB.php",
+		"/C/xampp/htdocs/i-tech/editTicket.php",
+		"/C/xampp/htdocs/i-tech/allTickets.php",
+		"/C/xampp/htdocs/i-tech/dbConn.php",
+		"/C/xampp/htdocs/i-tech/addSmartNS.php",
+		"/C/xampp/htdocs/i-tech/liste.php",
+		"/C/xampp/htdocs/i-tech/ns.php",
+		"/C/xampp/htdocs/i-tech/showTicket.php",
+		"/C/xampp/htdocs/i-tech/fournisseur.php",
+		"/C/xampp/htdocs/i-tech/css/style.css",
+		"/C/xampp/htdocs/i-tech/dashboard/getAlert.php",
+		"/C/xampp/htdocs/i-tech/css/style-supervision.css",
+		"/C/xampp/htdocs/i-tech/navbar.php",
+		"/C/xampp/htdocs/i-tech/smartEditDB.php",
+		"/C/xampp/htdocs/i-tech/smartEdit.php",
+		"/C/xampp/htdocs/i-tech/smartMailError.php",
+		"/C/Users/Loulou/Desktop/I-TECH/framework/wysiwyg/website/index.html",
+		"/C/xampp/htdocs/i-tech/js/bootstrap-wysiwyg.js",
+		"/C/Users/Loulou/Desktop/I-TECH/framework/bootstrap-wysiwyg-master/index.html",
+		"/C/xampp/htdocs/i-tech/editTicketDB.php",
+		"/C/xampp/htdocs/i-tech/login.php",
+		"/C/xampp/htdocs/i-tech/deleteTicket.php",
+		"/C/xampp/htdocs/test/css/demo.css",
+		"/C/xampp/htdocs/i-tech/logout.php",
+		"/C/xampp/htdocs/i-tech/register.php",
 		"/C/xampp/htdocs/i-tech/admin/index.php",
 		"/C/xampp/htdocs/i-tech/testastuce.php",
 		"/C/xampp/htdocs/i-tech/getTickets.php",
@@ -409,8 +370,7 @@
 		"/C/xampp/htdocs/test_mazeberry/eleve.php",
 		"/C/xampp/htdocs/test_mazeberry/note.php",
 		"/C/xampp/phpMyAdmin/user_password.php",
-		"/C/Users/Loulou/Desktop/EPSI COURS/PL SQL/tp1 - 2.sql",
-		"/C/Users/Loulou/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
+		"/C/Users/Loulou/Desktop/EPSI COURS/PL SQL/tp1 - 2.sql"
 	],
 	"find":
 	{
@@ -428,6 +388,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"smart_sn",
 			"8",
 			"hidden",
 			"type_client\n",
@@ -454,23 +415,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "editModif.php",
+					"file": "newTicket.php",
 					"settings":
 					{
-						"buffer_size": 3372,
+						"buffer_size": 12941,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								957,
-								1216
+								4351,
+								4364
 							]
 						],
 						"settings":
@@ -480,106 +441,109 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 84.0,
+						"translation.y": 841.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "smartLicense.php",
+					"file": "dashboard/getAlert.php",
 					"settings":
 					{
-						"buffer_size": 7371,
+						"buffer_size": 1822,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1015,
-								1015
+								569,
+								569
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 1260.0,
+						"translation.x": 54.0,
+						"translation.y": 2.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "smartLT.php",
+					"file": "navbar.php",
 					"settings":
 					{
-						"buffer_size": 2930,
+						"buffer_size": 2592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2176,
-								2176
+								610,
+								610
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "smartMailSend.php",
+					"file": "allTickets.php",
 					"settings":
 					{
-						"buffer_size": 264,
+						"buffer_size": 9429,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								264,
-								264
+								8171,
+								8171
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2051.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "smartMailError.php",
+					"file": "smartLicense.php",
 					"settings":
 					{
-						"buffer_size": 1925,
+						"buffer_size": 7417,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1694,
-								1654
+								6560,
+								6560
 							]
 						],
 						"settings":
@@ -589,162 +553,79 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 126.0,
+						"translation.y": 1983.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "smartEdit.php",
+					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 4310,
+						"buffer_size": 2642,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4178,
-								4178
+								1476,
+								1476
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 476.0,
+						"translation.y": 336.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "lt.php",
+					"file": "css/style-supervision.css",
 					"settings":
 					{
-						"buffer_size": 4150,
+						"buffer_size": 1099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3060,
-								2931
+								50,
+								50
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 546.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "addModif.php",
-					"settings":
-					{
-						"buffer_size": 807,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								595,
-								595
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "newTicket.php",
-					"settings":
-					{
-						"buffer_size": 12225,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7805,
-								7767
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 372.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "navbar.php",
-					"settings":
-					{
-						"buffer_size": 1811,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1319,
-								1319
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 191.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
 					"file": "css/style.css",
 					"settings":
 					{
-						"buffer_size": 2834,
+						"buffer_size": 2938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2831,
-								2831
+								2811,
+								2811
 							]
 						],
 						"settings":
@@ -754,25 +635,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 378.0,
+						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "showTicket.php",
+					"buffer": 8,
+					"file": "lt.php",
 					"settings":
 					{
-						"buffer_size": 9551,
+						"buffer_size": 4256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3806,
-								3838
+								4244,
+								4085
 							]
 						],
 						"settings":
@@ -782,248 +663,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1050.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "ns.php",
-					"settings":
-					{
-						"buffer_size": 518,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								518,
-								518
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "liste.php",
-					"settings":
-					{
-						"buffer_size": 523,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								60,
-								235
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "addSmartNS.php",
-					"settings":
-					{
-						"buffer_size": 933,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								867,
-								828
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "dbConn.php",
-					"settings":
-					{
-						"buffer_size": 169,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "allTickets.php",
-					"settings":
-					{
-						"buffer_size": 9252,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								9097,
-								9097
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2186.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "editTicket.php",
-					"settings":
-					{
-						"buffer_size": 12061,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "smartEditDB.php",
-					"settings":
-					{
-						"buffer_size": 840,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								718,
-								718
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "editModifDB.php",
-					"settings":
-					{
-						"buffer_size": 691,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 20,
-					"file": "addTicket.php",
-					"settings":
-					{
-						"buffer_size": 1890,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
