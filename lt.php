@@ -51,7 +51,7 @@ require_once('dbConn.php');
       }
     }
   }
-
+  $req .= ' ORDER BY DATE_LIVRAISON ASC';
   //echo '<tr><td>'.$req.'</td></tr>';
   $reponse = $db->query($req);
   $rep = $reponse->fetchAll();
