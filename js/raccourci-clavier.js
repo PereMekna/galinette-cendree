@@ -35,6 +35,16 @@ $(document).keydown(function(e)
 			window.location.href = "./newTicket.php";
 			return false;
 			break;
+		// SHIFT + L
+		case 76:
+			window.location.href = "./smartLicense.php";
+			return false;
+			break;
+		// SHIFT + F
+		case 70:
+			window.location.href = "./fournisseur.php";
+			return false;
+			break;
 	}
 	
 	isG = false; // On réinitialise le booléen

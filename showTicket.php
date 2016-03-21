@@ -64,6 +64,10 @@
     }
   }
 
+  $requete = $db->prepare("SELECT * FROM materiel WHERE N_TICKET = ?");
+  $requete->execute(array($id));
+  $materiel = $requete->fetchAll();
+
   
     ?>
   <div class="container">
@@ -125,6 +129,12 @@
                 <td>N° série</td>
                 <td><?php echo $sav_n_serie; } ?></td>
               </tr>
+              <?php if (count($materiel) > 0) {
+                foreach ($materiel as $mat) {
+                  echo '<tr><td><a id="link'.$mat["ID"].'" href="#link'.$mat["ID"].'" title="'.$mat["DESCRIPTION"].'" data-toggle="popover" data-placement="auto" data-trigger="focus" data-content="Mot de passe : '.$mat["MDP"].'">'.abbrToFull($mat["TYPE"]).' ('.$mat["DESCRIPTION"].')</a></td><td>'.$mat["PERIPH"].'</td></tr>';
+                }
+              }
+                ?>
             </table>
             <div class="panel-footer">
                 <a href="editTicket.php?id=<?php echo $id ?>">Éditer le ticket</a>

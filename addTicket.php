@@ -37,6 +37,27 @@ if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 					'login' => $_SESSION['login']
 					));
 
+	$nb = $_POST["cnt_mat"];
+	if ($nb > 0) {
+		$req = $db->prepare('INSERT INTO materiel(DESCRIPTION, N_TICKET, TYPE, MDP, PERIPH) VALUES(:description, :n_ticket, :type, :mdp, :periph)');
+		for ($i = 1; $i <= $nb ; $i++) {
+			$periph = "";
+			$mat_periph = $_POST["mat_periph_".$i];
+			foreach ($mat_periph as $single_periph) {
+				$periph .= $single_periph.', ';
+			}
+			$periph = substr($periph,0,strlen($periph)-2);
+			$req->execute(array(
+							'description' => $_POST['mat_desc_'.$i],
+							'n_ticket' => $lastID,
+							'type' => $_POST['mat_type_'.$i],
+							'mdp' => $_POST['mat_mdp_'.$i],
+							'periph' => $periph
+							));
+		}
+	}
+	
+
 	if ($_POST["typeinter"] == 'sav') {
 		$req = $db->prepare('INSERT INTO sav(N_TICKET, MARQUE, MODELE, N_SERIE) VALUES(:n_ticket, :marque, :modele, :n_serie)');
 		$req->execute(array(

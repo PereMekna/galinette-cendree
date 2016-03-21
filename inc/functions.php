@@ -58,6 +58,25 @@ function abbrToFull($str) {
 	  else if ($str == '2') {
 	    $str = 'Priorité haute';
 	  }
+	  else if ($str == 'port') {
+	    $str = 'Portable';
+	  }
+	  else if ($str == 'fixe') {
+	    $str = 'Fixe';
+	  }
+	  else if ($str == 'tabl') {
+	    $str = 'Tablette';
+	  }
+	  else if ($str == 'vide') {
+	    $str = 'Vidéoprojecteur';
+	  }
+	  else if ($str == 'serv') {
+	    $str = 'Serveur';
+	  }
+	  else if ($str == 'impr') {
+	    $str = 'Imprimante';
+	  }
+
 
 	  return $str;
 }
