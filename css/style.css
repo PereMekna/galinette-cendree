@@ -88,6 +88,10 @@ table.table-show > tbody > tr > td:first-child {
     }
 }
 
+.top-buffer {
+    margin-top: 10px;
+}
+
 .clickable-row {
     cursor: pointer;
 }

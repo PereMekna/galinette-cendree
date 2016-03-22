@@ -130,43 +130,47 @@
                 <input type="hidden" id="labpriohidden" name="labpriohidden" />
               </div>
             </div>
-            <div class="form-group">
-              <label for="text1" class="control-label col-md-2">Description du ticket :</label>
-              <div class="col-md-4">
-                <textarea id="text1" class="form-control" rows="5" required title="Description " name="description"></textarea>
-              </div>
-              <div style="display:none;">
-                <label for="bc" class="control-label col-md-2" style="display:none;">Fichier(s) à ajouter :</label>
-                <div class="col-md-4" style="display:none">
-                    <span class="btn btn-success fileinput-button">
-                        <i class="glyphicon glyphicon-plus"></i>
-                        <span>Select files...</span>
-                        <!-- The file input field used as target for the file upload widget -->
-                        <input id="fileupload" type="file" name="files[]" multiple>
-                    </span>
-                    <br>
-                    <br>
-                    <!-- The global progress bar -->
-                    <div id="progress" class="progress">
-                        <div class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <!-- The container for the uploaded files -->
-                    <div id="files" class="files"></div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="text1" class="control-label col-md-4">Description du ticket :</label>
+                <div class="col-md-8">
+                  <textarea id="text1" class="form-control" rows="5" required title="Description " name="description"></textarea>
+                </div>
+                <div class="col-md-offset-4 col-md-8 top-buffer">
+                  <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Ajouter le ticket</button>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div id="materiel_area">
-                  <input id="cnt_mat" type="hidden" name="cnt_mat" />
-                  <div class="form-group">
-                    <label for="materiel" class="control-label col-md-4">Matériel :</label>
-                    <div class="col-md-8">
+            </div>
+            <div style="display:none;">
+              <label for="bc" class="control-label col-md-2" style="display:none;">Fichier(s) à ajouter :</label>
+              <div class="col-md-4" style="display:none">
+                  <span class="btn btn-success fileinput-button">
+                      <i class="glyphicon glyphicon-plus"></i>
+                      <span>Select files...</span>
+                      <!-- The file input field used as target for the file upload widget -->
+                      <input id="fileupload" type="file" name="files[]" multiple>
+                  </span>
+                  <br>
+                  <br>
+                  <!-- The global progress bar -->
+                  <div id="progress" class="progress">
+                      <div class="progress-bar progress-bar-success"></div>
+                  </div>
+                  <!-- The container for the uploaded files -->
+                  <div id="files" class="files"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="materiel_area">
+                <input id="cnt_mat" type="hidden" name="cnt_mat" />
+                <div class="form-group">
+                  <label for="materiel" class="control-label col-md-4">Matériel :</label>
+                  <div class="col-md-8">
 
-                      <a class="btn btn-success" id="add" href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;</a>
-                    </div>
+                    <a class="btn btn-success" id="add" href="#"><span class="glyphicon glyphicon-plus"></span>&nbsp;</a>
                   </div>
                 </div>
               </div>
-              
             </div>
             <div class="form-group" style="display:none">
               <div class="checkbox col-md-offset-2 col-md-2" >
@@ -177,9 +181,7 @@
               </div>
             </div>
             <div class="form-group"> 
-              <div class="col-md-offset-2 col-md-4">
-                <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Ajouter le ticket</button>
-              </div>
+              
             </div>
           </div>
         </form>
@@ -326,11 +328,19 @@
     });
 
     $("#add").click(function () {
+      $('#remove'+i).fadeOut();
       i++;
-      $('<div class="form-group"><label for="mat'+i+'" class="control-label col-md-4">Matériel '+i+' :</label><div class="col-md-4"><select class="form-control" type="text" name="mat_type_'+i+'" id="mat_type_'+i+'"><option val="port">Portable</option><option val="fixe">Fixe</option><option val="serv">Serveur</option><option val="tabl">Tablette</option><option val="impr">Imprimante</option><option val="vide">Vidéoprojecteur</option></select></div><div class="col-md-4"><select multiple class="form-control" type="text" name="mat_periph_'+i+'[]" id="mat_periph_'+i+'"><option val="sour">Souris</option><option val="saco">Sacoche</option><option val="adap">Adaptateur secteur</option><option val="cd">CD / DVD</option><option val="usb">Clé USB</option><option val="ddex">Disque dur externe</option><option val="ecra">Écran</option><option val="clav">Clavier</option><option val="conne">Connectiques</option><option val="donn">Données importantes</option></select></div></div><div class="form-group"><div class="col-md-offset-4 col-md-8"><input class="form-control" placeholder="Mot de passe" type="text" id="mat_mdp_'+i+'" name="mat_mdp_'+i+'" /></div></div><div class="form-group"><div class="col-md-offset-4 col-md-8"><input class="form-control" placeholder="Description" type="text" id="mat_desc_'+i+'" name="mat_desc_'+i+'" /></div></div></div>').appendTo($("#materiel_area"));
+      $('<div class="col-md-offset-1 col-md-11 toRemove"><div class="panel panel-default"><div class="panel-heading">Matériel '+i+'<div class="pull-right"><a class="btn btn-danger remove" id="remove'+i+'" href="#"><span class="glyphicon glyphicon-remove"></span></a></div></div><div class="panel-body"><div class="form-group"><div class="col-md-6"> <select class="form-control" type="text" name="mat_type_'+i+'" id="mat_type_'+i+'"> <option val="port">Portable</option> <option val="fixe">Fixe</option> <option val="serv">Serveur</option> <option val="tabl">Tablette</option> <option val="impr">Imprimante</option> <option val="vide">Vidéoprojecteur</option> </select> </div><div class="col-md-6"><input class="form-control" placeholder="Description" type="text" id="mat_desc_'+i+'" name="mat_desc_'+i+'"/></div></div><div class="form-group"><div class="col-md-6"><input class="form-control" placeholder="Mot de passe" type="text" id="mat_mdp_'+i+'" name="mat_mdp_'+i+'"/></div><div class="col-md-6"> <select multiple class="form-control" type="text" name="mat_periph_'+i+'[]" id="mat_periph_'+i+'"> <option val="sour">Souris</option> <option val="saco">Sacoche</option> <option val="adap">Adaptateur secteur</option> <option val="cd">CD / DVD</option> <option val="usb">Clé USB</option> <option val="ddex">Disque dur externe</option> <option val="ecra">Écran</option> <option val="clav">Clavier</option> <option val="conne">Connectiques</option> <option val="donn">Données importantes</option> </select> </div></div></div></div></div>').appendTo($("#materiel_area"));
       $('#cnt_mat').val(i);
       $('#mat_type_'+i).focus();
       return false;
+    });
+
+    $(document).on('click', '.remove', function () {
+      $(this).parents('.toRemove').remove();
+      i--;
+      $('#cnt_mat').val(i);
+      $('#remove'+i).fadeIn();
     });
 
     </script>

@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"ID",
+				"ID"
+			],
+			[
+				"form-",
+				"form-group"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"la",
+				"lastID"
+			],
+			[
+				"mat",
+				"mat_periph"
+			],
+			[
+				"mat_",
+				"mat_type_"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"ip",
+				"input	Tag"
+			],
+			[
+				"top",
+				"top-buffer-sm"
+			],
+			[
+				"hidden",
+				"hiddenid"
+			],
+			[
+				"for",
+				"form-group"
+			],
+			[
 				"font",
 				"font-size"
 			],
@@ -34,10 +78,6 @@
 			[
 				"backgr",
 				"background-color"
-			],
-			[
-				"ID",
-				"ID_LICENSE"
 			],
 			[
 				"sm",
@@ -74,10 +114,6 @@
 			[
 				"print",
 				"print_r"
-			],
-			[
-				"for",
-				"foreach	foreach …"
 			],
 			[
 				"search",
@@ -207,7 +243,39 @@
 			"file": "newTicket.php",
 			"settings":
 			{
-				"buffer_size": 12941,
+				"buffer_size": 15851,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "showTicket.php",
+			"settings":
+			{
+				"buffer_size": 10248,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "addTicket.php",
+			"settings":
+			{
+				"buffer_size": 3231,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<div class=\"form-group\">\n	<label for=\"mat'+i+'\" class=\"control-label col-md-4\">Matériel '+i+' :</label>\n	<div class=\"col-md-4\">\n		<select class=\"form-control\" type=\"text\" name=\"mat_type_'+i+'\" id=\"mat_type_'+i+'\">\n			<option val=\"port\">Portable</option>\n			<option val=\"fixe\">Fixe</option>\n			<option val=\"serv\">Serveur</option>\n			<option val=\"tabl\">Tablette</option>\n			<option val=\"impr\">Imprimante</option>\n			<option val=\"vide\">Vidéoprojecteur</option>\n		</select>\n	</div>\n	<div class=\"col-md-4\">\n		<select multiple class=\"form-control\" type=\"text\" name=\"mat_periph_'+i+'\" id=\"mat_periph_'+i+'\">\n			<option val=\"sour\">Souris</option>\n			<option val=\"saco\">Sacoche</option>\n			<option val=\"adap\">Adaptateur secteur</option>\n			<option val=\"cd\">CD / DVD</option>\n			<option val=\"usb\">Clé USB</option>\n			<option val=\"ddex\">Disque dur externe</option>\n			<option val=\"ecra\">Écran</option>\n			<option val=\"clav\">Clavier</option>\n			<option val=\"conne\">Connectiques</option>\n		</select>\n	</div>\n	<div class\"col-md-4\"><input class=\"form-control\" type=\"text\" id=\"mdp\" name=\"mdp\" /></div>\n</div>",
+			"settings":
+			{
+				"buffer_size": 1092,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "smartLicense.php",
+			"settings":
+			{
+				"buffer_size": 7417,
 				"line_ending": "Windows"
 			}
 		},
@@ -231,15 +299,7 @@
 			"file": "allTickets.php",
 			"settings":
 			{
-				"buffer_size": 9429,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "smartLicense.php",
-			"settings":
-			{
-				"buffer_size": 7417,
+				"buffer_size": 9458,
 				"line_ending": "Windows"
 			}
 		},
@@ -247,7 +307,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 2642,
+				"buffer_size": 2694,
 				"line_ending": "Windows"
 			}
 		},
@@ -271,7 +331,63 @@
 			"file": "lt.php",
 			"settings":
 			{
-				"buffer_size": 4256,
+				"buffer_size": 4313,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/raccourci-clavier.js",
+			"settings":
+			{
+				"buffer_size": 1046,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "fournisseur.php",
+			"settings":
+			{
+				"buffer_size": 2236,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "fournisseurUpdate.php",
+			"settings":
+			{
+				"buffer_size": 332,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "getCustomer.php",
+			"settings":
+			{
+				"buffer_size": 1043,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "customerUpdate.php",
+			"settings":
+			{
+				"buffer_size": 268,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "addSmartNS.php",
+			"settings":
+			{
+				"buffer_size": 961,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "inc/functions.php",
+			"settings":
+			{
+				"buffer_size": 1612,
 				"line_ending": "Windows"
 			}
 		}
@@ -388,6 +504,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"value",
+			"val",
 			"smart_sn",
 			"8",
 			"hidden",
@@ -399,11 +517,13 @@
 			"if (!empty($_POST[\"Nom\"])) {"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"val",
+			"value",
 			"$str"
 		],
 		"reverse": false,
@@ -423,15 +543,15 @@
 					"file": "newTicket.php",
 					"settings":
 					{
-						"buffer_size": 12941,
+						"buffer_size": 15851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4351,
-								4364
+								15684,
+								15684
 							]
 						],
 						"settings":
@@ -441,13 +561,121 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 841.0,
+						"translation.y": 4155.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "showTicket.php",
+					"settings":
+					{
+						"buffer_size": 10248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4945,
+								4945
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2984.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "addTicket.php",
+					"settings":
+					{
+						"buffer_size": 3231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1801,
+								1801
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 328.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 1092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1085,
+								996
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "smartLicense.php",
+					"settings":
+					{
+						"buffer_size": 7417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5476,
+								5427
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1218.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "dashboard/getAlert.php",
 					"settings":
 					{
@@ -465,34 +693,6 @@
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 54.0,
-						"translation.y": 2.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "navbar.php",
-					"settings":
-					{
-						"buffer_size": 2592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								610,
-								610
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -503,19 +703,47 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "allTickets.php",
+					"buffer": 6,
+					"file": "navbar.php",
 					"settings":
 					{
-						"buffer_size": 9429,
+						"buffer_size": 2592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8171,
-								8171
+								150,
+								150
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "allTickets.php",
+					"settings":
+					{
+						"buffer_size": 9458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5484,
+								5484
 							]
 						],
 						"settings":
@@ -525,53 +753,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2051.0,
+						"translation.y": 1085.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "smartLicense.php",
-					"settings":
-					{
-						"buffer_size": 7417,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6560,
-								6560
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1983.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 2642,
+						"buffer_size": 2694,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1476,
-								1476
+								2671,
+								2625
 							]
 						],
 						"settings":
@@ -581,13 +781,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 336.0,
+						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "css/style-supervision.css",
 					"settings":
 					{
@@ -613,7 +813,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 10,
 					"file": "css/style.css",
 					"settings":
 					{
@@ -641,19 +841,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 11,
 					"file": "lt.php",
 					"settings":
 					{
-						"buffer_size": 4256,
+						"buffer_size": 4313,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4244,
-								4085
+								1386,
+								1356
 							]
 						],
 						"settings":
@@ -663,7 +863,196 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 756.0,
+						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "js/raccourci-clavier.js",
+					"settings":
+					{
+						"buffer_size": 1046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								960,
+								960
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "fournisseur.php",
+					"settings":
+					{
+						"buffer_size": 2236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2014,
+								1881
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "fournisseurUpdate.php",
+					"settings":
+					{
+						"buffer_size": 332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								332,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "getCustomer.php",
+					"settings":
+					{
+						"buffer_size": 1043,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1011,
+								1011
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "customerUpdate.php",
+					"settings":
+					{
+						"buffer_size": 268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "addSmartNS.php",
+					"settings":
+					{
+						"buffer_size": 961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								852,
+								590
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "inc/functions.php",
+					"settings":
+					{
+						"buffer_size": 1612,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1581,
+								1581
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
