@@ -119,6 +119,13 @@ table.table-show > tbody > tr > td:first-child {
     .noprint {
         display: none;
     }
+    .panel.print {
+        width: 50%;
+        border-radius: 0px;
+        position: fixed;
+        top:15px;
+        right: 5px;
+    }
     table.print>tbody>td, table.print>tbody>tr>td {
         padding: 2px;
         margin: 0px;
@@ -141,8 +148,9 @@ table.table-show > tbody > tr > td:first-child {
         height: 30px;
         width: 25%;
     }
-    .print-text {
-        width: 80%;
+    .print-text div {
+        width: 70%;
+        border: 1px solid #000 !important;
     }
     label {
         page-break-after: avoid;
@@ -151,14 +159,15 @@ table.table-show > tbody > tr > td:first-child {
         display: block;
     }
     .logo-print {
-        display: block !important;   
+        display: block !important;
+        width: 50%; 
     }
     .logo-print:before {
         content: url('../img/logoitech.jpg');
     }
     h1 {
         font-size: 25px;
-        float: right;
+        padding: 20px;
     }
     body {
         padding-top: 20px;
