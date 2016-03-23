@@ -109,6 +109,8 @@ table.table-show > tbody > tr > td:first-child {
 @media print {
     body {
         font-size: 12px;
+        margin-top: 10px;
+        padding-top: 0px;
     }
     navbar {
         display :none;
@@ -119,12 +121,9 @@ table.table-show > tbody > tr > td:first-child {
     .noprint {
         display: none;
     }
-    .panel.print {
-        width: 50%;
-        border-radius: 0px;
-        position: fixed;
-        top:15px;
-        right: 5px;
+    div.col-md-4 {
+        width: 55%;
+        display: inline-block;
     }
     table.print>tbody>td, table.print>tbody>tr>td {
         padding: 2px;
@@ -141,38 +140,43 @@ table.table-show > tbody > tr > td:first-child {
       color: #000!important;
       margin: auto!important;
     }
-    .print-right {
-        float: right;
-        position: relative;
-        top: -80px;
-        height: 30px;
-        width: 25%;
+    div.print-right {
+        display: inline-block;
     }
-    .print-text div {
+    div.print-text {
         width: 70%;
-        border: 1px solid #000 !important;
+        display: inline-block;
+        border-right: 1px solid #000;
     }
     label {
         page-break-after: avoid;
     }
     .hideonscreen {
-        display: block;
+        display: inline-block;
     }
-    .logo-print {
-        display: block !important;
-        width: 50%; 
+    div.logo-print {
+        display: inline-block !important;
+        width: 40%;
+        vertical-align: top;
+    }
+    .logo-print p {
+        padding-top: 30px;
     }
     .logo-print:before {
-        content: url('../img/logoitech.jpg');
-    }
+        content: url('../img/logoitech.jpg');    }
     h1 {
         font-size: 25px;
         padding: 20px;
     }
-    body {
-        padding-top: 20px;
-    }
     .panel-footer {
         display :none;
+    }
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #000;
+        margin: 1em 0;
+        padding: 0; 
     }
 }

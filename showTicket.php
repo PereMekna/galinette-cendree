@@ -70,11 +70,11 @@
 
   
     ?>
-    <div class="logo-print"><p>I-TECH INFORMATIQUE & TECHNOLOGIES<br />RCS: 47884924300017<br />Capital : 100 000€<br />176 route de Lens<br />62223 Ste Catherine</p></div>
+    
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <h1 class="print">Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
+        <h1 class="noprint">Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
       </div>
       <div class="col-sm-4">
         <div class="pull-right">
@@ -86,6 +86,7 @@
     </div>
         <br /><br />
         <div class="row">
+          <div class="logo-print"><p>I-TECH INFORMATIQUE & TECHNOLOGIES<br />RCS: 47884924300017<br />Capital : 100 000€<br />176 route de Lens<br />62223 Ste Catherine</p></div>
           <div class="col-md-4">
             <div class="panel panel-default print">
             <table class="table table-show print">
@@ -171,7 +172,7 @@
 
                 <div class="print-text">
                 <label for="modif" class="control-label col-md-3">Modif :</label>
-                <div class="col-md-6 print-text">
+                <div class="col-md-6">
                   <p class="form-control-static text-justify" id="desc"><?php echo nl2br($data["TEXTE"]) ?></p>
                 </div>
               </div>
