@@ -102,6 +102,10 @@ table.table-show > tbody > tr > td:first-child {
     background-color: rgba(0,0,0,0.1);
 }
 
+.logo-print {
+    display: none;
+}
+
 @media print {
     body {
         font-size: 12px;
@@ -145,5 +149,21 @@ table.table-show > tbody > tr > td:first-child {
     }
     .hideonscreen {
         display: block;
+    }
+    .logo-print {
+        display: block !important;   
+    }
+    .logo-print:before {
+        content: url('../img/logoitech.jpg');
+    }
+    h1 {
+        font-size: 25px;
+        float: right;
+    }
+    body {
+        padding-top: 20px;
+    }
+    .panel-footer {
+        display :none;
     }
 }

@@ -70,6 +70,7 @@
 
   
     ?>
+    <div class="logo-print"><p>I-TECH INFORMATIQUE & TECHNOLOGIES<br />RCS: 47884924300017<br />Capital : 100 000€<br />176 route de Lens<br />62223 Ste Catherine</p></div>
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
@@ -77,6 +78,7 @@
       </div>
       <div class="col-sm-4">
         <div class="pull-right">
+          <a class="btn btn-default" id="print"><span class="glyphicon glyphicon-print"></span> Imprimer</a>
         <a class="btn btn-default" href="editTicket.php?id=<?php echo $id ?>"><span class="glyphicon glyphicon-edit"></span> Éditer</a>
         <a class="btn btn-danger" data-toggle="modal" data-target="#modal"><span class="glyphicon glyphicon-remove"></span> Supprimer</a>
       </div>
@@ -241,6 +243,9 @@
   $(document).ready(function(){
       $('[data-toggle="popover"]').popover();   
   });
+  $('#print').click(function() {
+    window.print();
+  })
   </script>
   <?php
   $reponse->closeCursor(); ?>
