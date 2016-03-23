@@ -101,3 +101,49 @@ table.table-show > tbody > tr > td:first-child {
     padding: 10px;
     background-color: rgba(0,0,0,0.1);
 }
+
+@media print {
+    body {
+        font-size: 12px;
+    }
+    navbar {
+        display :none;
+    }
+    .print {
+        display: block;
+    }
+    .noprint {
+        display: none;
+    }
+    table.print>tbody>td, table.print>tbody>tr>td {
+        padding: 2px;
+        margin: 0px;
+        font-size: 10px;
+    }
+    .btn {
+        display: none;
+    }
+    a[data-content]:after {
+        content: " (" attr(data-content) ")";
+    }
+    p, h1, h2, h3, h4, h5, h6, blockquote, ul, ol {
+      color: #000!important;
+      margin: auto!important;
+    }
+    .print-right {
+        float: right;
+        position: relative;
+        top: -80px;
+        height: 30px;
+        width: 25%;
+    }
+    .print-text {
+        width: 80%;
+    }
+    label {
+        page-break-after: avoid;
+    }
+    .hideonscreen {
+        display: block;
+    }
+}

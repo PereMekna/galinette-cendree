@@ -73,7 +73,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-8">
-        <h1>Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
+        <h1 class="print">Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
       </div>
       <div class="col-sm-4">
         <div class="pull-right">
@@ -86,11 +86,14 @@
         <div class="row">
           <div class="col-md-4">
             <div class="panel panel-default">
-            <table class="table table-show">
+            <table class="table table-show print">
               <tr>
                 <td>Client</td>
                 <td><a href="#" title="<?php echo $intitule ?>" data-toggle="popover" data-placement="auto" data-trigger="focus" data-content="<?php echo 'Réf : '.$ref_client.' / Mail : '.$mail.' / Tél : '.$tel ?>"><?php echo $ref_client ?></a>
               </tr>
+              <tr>
+                <td>N° Ticket</td>
+                <td><?php echo $id ?></td>
               <tr>
                 <td>N° BC</td>
                 <td><?php echo $n_bc ?></td>
@@ -139,33 +142,38 @@
             <div class="panel-footer">
                 <a href="editTicket.php?id=<?php echo $id ?>">Éditer le ticket</a>
             </div>
-          </div>
 
+          </div>
           </div>
           <div class="col-md-8">
             <form role="form" class="form-horizontal" action="addModif.php" method="post" >
               <input type="hidden" id="idhidden" name="idhidden" value="<?php echo $id ?>" />
               <div class="form-group">
+                <div class="print-text">
                 <label for="desc" class="control-label col-md-3">Description :</label>
                 <div class="col-md-6">
                   <p class="form-control-static text-justify" id="desc"><?php $data = $reponsedesc->fetch(); echo nl2br($data["TEXTE"]) ?></p>
                 </div>
+              </div>
               
-                <div class="col-md-3">
+                <div class="col-md-3 print-right">
                   <a class="btn btn-default pull-right" role="button" href="editModif.php?id=<?php echo $data["ID"]; ?>"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
                 <p class="form-control-static">
                 <strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')<br />Par : '.$data["ID_USER"] ?><br /></p>
                 </div>
                 </div>
+              
                 <hr />
                 <?php while($data = $reponsedesc->fetch()) { ?>
                 <div class="form-group">
-                
+
+                <div class="print-text">
                 <label for="modif" class="control-label col-md-3">Modif :</label>
-                <div class="col-md-6">
+                <div class="col-md-6 print-text">
                   <p class="form-control-static text-justify" id="desc"><?php echo nl2br($data["TEXTE"]) ?></p>
                 </div>
-                <div class="col-md-3">
+              </div>
+                <div class="col-md-3 print-right">
                     <a class="btn btn-default pull-right" role="button" href="editModif.php?id=<?php echo $data["ID"]; ?>"><span class="glyphicon glyphicon-edit"></span>&nbsp;</a>
                 <p class="form-control-static"><strong><?php echo abbrToFull($data['AVANCEMENT']).'</strong><br />('.date("D d/m/Y H:i:s", strtotime($data["DATE"])).')<br />Par : '.$data["ID_USER"] ?></p>
                 </div>
@@ -173,7 +181,7 @@
                 <hr />
 
                 <?php } ?>
-                <div class="well col-md-offset-1">
+                <div class="well col-md-offset-1 noprint">
                 <div class="form-group">
                 <label for="modif" class="control-label col-md-2">Modif :</label>
                 <div class="col-md-7">
