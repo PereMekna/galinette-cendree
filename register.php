@@ -34,8 +34,13 @@
       $err .= '<span class="label label-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> Identifiant déjà utilisé.</span><br />';
     }
   }
+  $req = $db->query('SELECT * FROM content WHERE ID = "validation"');
+  $data = $req->fetch();
+  if (isset($_POST["validation"]) && $_POST["validation"] != $data["CONTENT"]) {
+    $err .= '<span class="label label-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> Code de validation incorrect.</span><br />';
+  }
 
-  if (isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["password_conf"]) && isset($_POST["mail"]) && ($_POST["password_conf"] == $_POST["password"] && $verif == 0)) {
+  if (isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["password_conf"]) && isset($_POST["mail"]) && ($_POST["password_conf"] == $_POST["password"] && $verif == 0) && isset($_POST["validation"]) && $_POST["validation"] == $data["CONTENT"]) {
     
     $req = $db->prepare('INSERT INTO users(LOGIN, PASSWORD, MAIL) VALUES(:login, :password, :mail)');
     $req->execute(array(
@@ -68,19 +73,25 @@
               <div class="form-group"> 
                 <label for="password" class="control-label col-md-2">Mot de passe :</label>
                 <div class="col-md-4">
-                  <input id="password" type="password" title="Mot de passe" class="form-control" placeholder="Mot de passe" name="password" required autofocus>
+                  <input id="password" type="password" title="Mot de passe" class="form-control" placeholder="Mot de passe" name="password" required>
                 </div>
               </div>
               <div class="form-group"> 
                 <label for="password_conf" class="control-label col-md-2">Confirmation :</label>
                 <div class="col-md-4">
-                  <input id="password_conf" type="password" title="Mot de passe" class="form-control" placeholder="Mot de passe" name="password_conf" required autofocus>
+                  <input id="password_conf" type="password" title="Mot de passe" class="form-control" placeholder="Mot de passe" name="password_conf" required>
                 </div>
               </div>
               <div class="form-group"> 
                 <label for="mail" class="control-label col-md-2">Adresse mail :</label>
                 <div class="col-md-4">
-                  <input id="mail" type="email" title="Mail" class="form-control" name="mail" value='<?php if (isset($_POST["mail"])) echo $_POST["mail"]; ?>' placeholder="azerty@azerty.fr" required autofocus>
+                  <input id="mail" type="email" title="Mail" class="form-control" name="mail" value='<?php if (isset($_POST["mail"])) echo $_POST["mail"]; ?>' placeholder="azerty@azerty.fr" required>
+                </div>
+              </div>
+              <div class="form-group"> 
+                <label for="validation" class="control-label col-md-2">Code de validation :</label>
+                <div class="col-md-4">
+                  <input id="validation" type="text" title="Validation" class="form-control" placeholder="Validation" name="validation" required>
                 </div>
               </div>
               <div class="form-group"> 
