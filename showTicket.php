@@ -86,7 +86,7 @@
     </div>
         <br /><br />
         <div class="row">
-          <div class="logo-print"><p>I-TECH INFORMATIQUE & TECHNOLOGIES<br />RCS: 47884924300017<br />Capital : 100 000€<br />176 route de Lens<br />62223 Ste Catherine</p></div>
+          <div class="logo-print"><p>I-TECH INFORMATIQUE & TECHNOLOGIES<br />RCS: 47884924300017<br />Capital : 100 000€<br />176 route de Lens<br />62223 Ste Catherine<br />Tel : 03 21 60 12 12<br />Fax : 03 21 50 58 27</p></div>
           <div class="col-md-4">
             <div class="panel panel-default print">
             <table class="table table-show print">
@@ -118,7 +118,7 @@
                 <td><?php if ($facturation) echo 'A facturer';
               else echo 'Sous maintenance / garantie'; ?></td>
               </tr>
-              <tr>
+              <tr class="noprint">
                 <td>Priorité</td>
                 <td><?php echo abbrToFull($priorite) ?></td>
               </tr>
@@ -149,9 +149,10 @@
           </div>
           </div>
           <div class="col-md-8">
+            <h2 class="print"><br />Suivi du ticket<br /></h2>
             <form role="form" class="form-horizontal" action="addModif.php" method="post" >
               <input type="hidden" id="idhidden" name="idhidden" value="<?php echo $id ?>" />
-              <div class="form-group">
+              <div class="form-group print-group">
                 <div class="print-text">
                 <label for="desc" class="control-label col-md-3">Description :</label>
                 <div class="col-md-6">
@@ -168,7 +169,7 @@
               
                 <hr />
                 <?php while($data = $reponsedesc->fetch()) { ?>
-                <div class="form-group">
+                <div class="form-group print-group">
 
                 <div class="print-text">
                 <label for="modif" class="control-label col-md-3">Modif :</label>

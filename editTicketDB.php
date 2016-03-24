@@ -12,7 +12,7 @@ if (isset($_POST["ref_client"])) {
   }
   else $fac = 0;
 
-  $req = $db->prepare('UPDATE tickets SET REF_CLIENT = :ref_client, TYPE_CLIENT = :type_client, TYPE_INTER = :type_inter, DATE_LIVRAISON = :date_livraison, FACTURATION = :facturation, N_BC = :n_bc WHERE ID = :id');
+  $req = $db->prepare('UPDATE tickets SET REF_CLIENT = :ref_client, TYPE_CLIENT = :type_client, TYPE_INTER = :type_inter, DATE_LIVRAISON = :date_livraison, FACTURATION = :facturation, N_BC = :n_bc, PRIORITE = :priorite WHERE ID = :id');
   $req->execute(array(
           'ref_client' => $_POST["ref_client"],
           'type_client' => $_POST["typeclient"],
@@ -20,6 +20,7 @@ if (isset($_POST["ref_client"])) {
           'date_livraison' => $_POST["datepicker"],
           'facturation' => $fac,
           'n_bc' => $_POST["bc"],
+          'priorite' => $_POST["labpriohidden"],
           'id' => $id));
 
   if ($_POST["typeinter"] == 'sav') {

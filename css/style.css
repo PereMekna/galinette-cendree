@@ -106,14 +106,28 @@ table.table-show > tbody > tr > td:first-child {
     display: none;
 }
 
+.logo-print:before {
+    content: url('../img/logoitech.jpg');
+    display: none;
+}
+
+h2.print {
+    display: none;
+}
+
 @media print {
     body {
         font-size: 12px;
-        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
         padding-top: 0px;
     }
     navbar {
         display :none;
+    }
+    h2.print {
+        display: inline;
+        margin-bottom: 30px;
     }
     .print {
         display: block;
@@ -142,11 +156,15 @@ table.table-show > tbody > tr > td:first-child {
     }
     div.print-right {
         display: inline-block;
+        width: 28%;
+        font-size: 12px;
     }
     div.print-text {
         width: 70%;
         display: inline-block;
-        border-right: 1px solid #000;
+        vertical-align: top;
+        font-size: 12px;
+        padding: 5px;
     }
     label {
         page-break-after: avoid;
@@ -163,20 +181,23 @@ table.table-show > tbody > tr > td:first-child {
         padding-top: 30px;
     }
     .logo-print:before {
-        content: url('../img/logoitech.jpg');    }
-    h1 {
+        content: url('../img/logoitech.jpg');
+        display: inline-block;
+    }
+    h2.print {
         font-size: 25px;
-        padding: 20px;
     }
     .panel-footer {
         display :none;
     }
     hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid #000;
-        margin: 1em 0;
-        padding: 0; 
+        display: none;
+    }
+    div.print-group {
+        border : 1px solid #aaa;
+        margin-bottom: 0px;
+    }
+    form {
+        margin-top: 35px;
     }
 }
