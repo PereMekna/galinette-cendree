@@ -1,6 +1,6 @@
 <?php
-$destinataire = 'jerome.dupire@itech-informatique.com';
-$expediteur = 'i-tech@wanadoo.fr';
+$destinataire = 'jb@itech-informatique.com';
+$expediteur = 'i-tech@orange.fr';
 $objet = "coucou";
 $message = "Description du ticket : <br />";
 $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
