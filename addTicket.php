@@ -2,6 +2,7 @@
 session_start();
 if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 	require_once('dbConn.php');
+	require_once('inc/functions.php'); 
 
 	if ($_POST["facturation"] == "fac"){
 		$fac = 1;
@@ -65,21 +66,25 @@ if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 						'marque' => $_POST['marque'],
 						'modele' => $_POST['modele'],
 						'n_serie' => $_POST['noserie']));
-		$destinataire = 'jerome.dupire@itech-informatique.com';
-		$expediteur = 'coucou@itech-informatique.com';
+		$destinataire = 'dupont.louis4@gmail.com';
+		$expediteur = 'sav@itech-informatique.com';
 		$objet = "[".$_POST['ref_client']."] ".$_POST['marque'].' '.$_POST['modele'].' '.$_POST['noserie'];
-		$message = "Description du ticket : <br />".$_POST['description'];
+		$message = "<h1>Retour SAV pour ".$_POST['ref_client']."</h1>";
+		$message .= "[Référence client : ".$_POST['ref_client']."]<br /><u>Marque :</u> ".$_POST['marque'].'<br /><u>Modèle :</u> '.$_POST['modele'].'<br /><u>N° série :</u> '.$_POST['noserie'];
+		$message .= "<br /><br /><u>Description du ticket :</u> <br />".$_POST['description'];
+		$message .= "<br /><u>Date de livraison :</u> ".$_POST['datepicker']."<br />";
+		if ($nb > 0) {
+			for ($i = 1; $i <= $nb ; $i++) {
+				$message .= "<br /><u>Matériel ".$i." :</u> ".abbrToFull($_POST['mat_type_'.$i])." (".$_POST['mat_desc_'.$i].")";
+			}
+		}
+		$message .= "<br /><br />Cordialement,<br />Louis Dupont<br />Développeur web super compétent";
 		$headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
 		$headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n";
 		$headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
-		$headers .= 'From: "ITECH"<'.$expediteur.'>'."\n"; // Expediteur
+		$headers .= 'From: "ITECH gestion SAV"<'.$expediteur.'>'."\n"; // Expediteur
 		$headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
 		mail($destinataire, $objet, $message, $headers);
-	}
-	if(count($_FILES['files']['name']) > 0) {
-		for ($i = 0; $i < count($_FILES['files']['name']); $i++) {
-			print_r($file);
-		}
 	}
 	if ($_POST['mailrappel'] = 'mail') {
 		
