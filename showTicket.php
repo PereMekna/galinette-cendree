@@ -73,10 +73,10 @@
     
   <div class="container">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-6">
         <h1 class="noprint">Ticket pour <?php echo $intitule?> <small><?php echo $avancement ?></small></h1>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <div class="pull-right">
           <a class="btn btn-default" id="print"><span class="glyphicon glyphicon-print"></span> Imprimer</a>
         <a class="btn btn-default" href="editTicket.php?id=<?php echo $id ?>"><span class="glyphicon glyphicon-edit"></span> Éditer</a>

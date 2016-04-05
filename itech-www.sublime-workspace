@@ -458,6 +458,14 @@
 				"buffer_size": 1356,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "test/testmail.php",
+			"settings":
+			{
+				"buffer_size": 981,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -488,6 +496,7 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/bijoux-www/prestashop/header.php",
 		"/C/xampp/htdocs/i-tech/showTicket.php",
 		"/C/xampp/htdocs/i-tech/css/style-supervision.css",
 		"/C/xampp/htdocs/i-tech/dashboard/index.php",
@@ -603,7 +612,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -618,8 +627,8 @@
 						"selection":
 						[
 							[
-								15534,
-								15534
+								16237,
+								16189
 							]
 						],
 						"settings":
@@ -629,7 +638,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1388.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -702,8 +711,8 @@
 						"selection":
 						[
 							[
-								6053,
-								6053
+								10547,
+								10639
 							]
 						],
 						"settings":
@@ -713,7 +722,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1848.0,
+						"translation.y": 3278.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1180,6 +1189,32 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "test/testmail.php",
+					"settings":
+					{
+						"buffer_size": 981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
