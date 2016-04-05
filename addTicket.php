@@ -66,7 +66,7 @@ if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 						'marque' => $_POST['marque'],
 						'modele' => $_POST['modele'],
 						'n_serie' => $_POST['noserie']));
-		$destinataire = 'jerome.dupire@itech-informatique.com';
+		$destinataire = 'dupont.louis4@gmail.com';
 		$expediteur = 'sav@itech-informatique.com';
 		$objet = "[".$_POST['ref_client']."] ".$_POST['marque'].' '.$_POST['modele'].' '.$_POST['noserie'];
 		$message = "<h1>Retour SAV pour ".$_POST['ref_client']."</h1>";
