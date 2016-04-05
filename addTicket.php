@@ -70,15 +70,15 @@ if (isset($_POST["ref_client"]) && isset($_POST["description"])) {
 		$expediteur = 'sav@itech-informatique.com';
 		$objet = "[".$_POST['ref_client']."] ".$_POST['marque'].' '.$_POST['modele'].' '.$_POST['noserie'];
 		$message = "<h1>Retour SAV pour ".$_POST['ref_client']."</h1>";
-		$message .= "[Référence client : ".$_POST['ref_client']."]<br /><u>Marque :</u> ".$_POST['marque'].'<br /><u>Modèle :</u> '.$_POST['modele'].'<br /><u>N° série :</u> '.$_POST['noserie'];
+		$message .= "[R&eacute;f&eacute;rence client : ".$_POST['ref_client']."]<br /><u>Marque :</u> ".$_POST['marque'].'<br /><u>Mod&egrave;le :</u> '.$_POST['modele'].'<br /><u>N s&eacute;rie :</u> '.$_POST['noserie'];
 		$message .= "<br /><br /><u>Description du ticket :</u> <br />".$_POST['description'];
 		$message .= "<br /><u>Date de livraison :</u> ".$_POST['datepicker']."<br />";
 		if ($nb > 0) {
 			for ($i = 1; $i <= $nb ; $i++) {
-				$message .= "<br /><u>Matériel ".$i." :</u> ".abbrToFull($_POST['mat_type_'.$i])." (".$_POST['mat_desc_'.$i].")";
+				$message .= "<br /><u>Mat$eacute;riel ".$i." :</u> ".abbrToFull($_POST['mat_type_'.$i])." (".$_POST['mat_desc_'.$i].")";
 			}
 		}
-		$message .= "<br /><br />Cordialement,<br />Louis Dupont<br />Développeur web super compétent";
+		$message .= "<br /><br />Cordialement,<br />Louis Dupont<br />D&eacute;veloppeur web super comp&eacute;tent";
 		$headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
 		$headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n";
 		$headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
