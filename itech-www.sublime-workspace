@@ -327,7 +327,7 @@
 			"file": "addTicket.php",
 			"settings":
 			{
-				"buffer_size": 3231,
+				"buffer_size": 3816,
 				"line_ending": "Windows"
 			}
 		},
@@ -463,7 +463,7 @@
 			"file": "test/testmail.php",
 			"settings":
 			{
-				"buffer_size": 981,
+				"buffer_size": 1024,
 				"line_ending": "Windows"
 			}
 		}
@@ -581,6 +581,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"é",
 			"value",
 			"val",
 			"smart_sn",
@@ -594,11 +595,12 @@
 			"if (!empty($_POST[\"Nom\"])) {"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"$eacute;",
 			"val",
 			"value",
 			"$str"
@@ -612,7 +614,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -722,7 +724,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3278.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -732,15 +734,15 @@
 					"file": "addTicket.php",
 					"settings":
 					{
-						"buffer_size": 3231,
+						"buffer_size": 3816,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1801,
-								1801
+								3056,
+								3056
 							]
 						],
 						"settings":
@@ -749,7 +751,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1008.0,
+						"translation.y": 798.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -848,8 +850,8 @@
 						"selection":
 						[
 							[
-								150,
-								150
+								2539,
+								2509
 							]
 						],
 						"settings":
@@ -859,7 +861,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 84.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1132,7 +1134,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 504.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1198,15 +1200,15 @@
 					"file": "test/testmail.php",
 					"settings":
 					{
-						"buffer_size": 981,
+						"buffer_size": 1024,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								84,
-								84
+								660,
+								660
 							]
 						],
 						"settings":
